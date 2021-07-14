@@ -6,6 +6,17 @@ window.addEventListener('resize', () => {
     }
 })
 
+const phone = "612-412-2313";
+const email = "seperliam@gmail.com";
+
+async function copyPhone() {
+    await navigator.clipboard.writeText(phone);
+}
+
+async function copyEmail() {
+    await navigator.clipboard.writeText(email);
+}
+
 let shownDivs = [0];
 
 const divs = [
