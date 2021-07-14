@@ -41,17 +41,17 @@
     </div>
     </div>
     <!-- content div -->
-    <div class='bg-gray-200 lg:px-16 text-center'>
-        <div class='2xl:w-3/4 xl:w-full xl:m-auto'>
-            <!-- Part below images -->
+    <div class='bg-gray-200 lg:px-16 pb-10 text-center'>
+        <div class='flex-initial 2xl:w-3/4 xl:w-full xl:m-auto'>
+            <!-- Part below images (only visible on mobile)-->
             <nav class='flex flex-row justify-around lg:justify-between text-lg md:text-2xl'>
-                <!-- nav tags -->
+                <!-- Link tags -->
                 <div class='w-1/4 md:w-1/6 pb-4 px-3 pt-3 rounded-b-full bg-blue-600 text-white font-semibold'>
                     <h2 class='mt-2 md:m-3'>
                         About
                     </h2>
                 </div>
-                <a href='/portfolio-website/public/projects.html' class='w-1/4 md:w-1/6 pb-4 pl-3 pr-3 pt-3 rounded-b-full bg-purple-600 text-white font-semibold'>
+                <a href='projects.html' class='w-1/4 md:w-1/6 pb-4 pl-3 pr-3 pt-3 rounded-b-full bg-purple-600 text-white font-semibold'>
                     <h2 class='mt-2 md:m-3'>
                         Projects
                     </h2>
@@ -62,9 +62,10 @@
                     </h2>
                 </div>
             </nav>
+            <!-- Start of Info Div -->
             <div class='flex flex-wrap md:flex-nowrap lg:justify-between xl:pt-10 pt-4 px-4 lg:px-0'>
-                <div class='max-w-2xl flex flex-col' id='cards-inner'>
-                    <!-- Bio div -->
+                <div class='flex flex-col' id='cards-inner'>
+                    <!-- About div -->
                     <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='about-card'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>About</h1>
                         <!-- About Content -->
@@ -76,15 +77,15 @@
                                   <div class="mx-auto text-base font-medium leading-relaxed text-gray-700 ">
                                       <p>I'm Liam, a rising junior studying Computer Science, Mathematics, and Business at the Raikes School of Computer Science and Management at the University of Nebraska-Lincoln. I plan on graduating in the summer of 2023, with majors in Computer Science and Mathematics (Discrete & Cryptographical Concentration), as well as a minor in Business.</p>
                                       <br>
-                                      <p>Through my studies I've become passionate about many things, such as web development, game development, machine learning, and generative artwork. And though backend development is more my forté, I made this website so you can get to know me better than a simple LinkedIn page, or one-page resume.</p>
+                                      <p>Through my studies I've become passionate about many things, such as web development, game development, machine learning, and generative artwork. And although backend development is more my forté, I made this website so you can get to know me better than a simple LinkedIn page, or one-page resume.</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </section>                
                     </div>
-                    <!-- Projects div -->
-                    <div class='p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='achievements-card'>
+                    <!-- Involvements div -->
+                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='achievements-card'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Involvements</h1>
                         <div class="container items-center px-5 py-3">
                             <!-- Projects Content -->
@@ -105,54 +106,189 @@
 
                                     <!-- oSTEM -->
                                     <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
-                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
                                         <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/ostem-logo.png">
                                         </div>
                                         <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
                                         <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">oSTEM</h2>
                                         <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Member</h3>
-                                        <p class="text-base font-medium leading-relaxed text-gray-700">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur laboriosam distinctio non quo vero, dignissimos iste natus excepturi adipisci blanditiis quidem quod beatae qui nisi quam ullam molestiae nesciunt recusandae.</p>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>I am a member of the oSTEM Chapter at UNL, a club dedicated to the support and development of LGBTQ+ individuals within various fields of STEM. We hold meetings monthly, as well as careers fairs, fundraisers, and networking events.</p>
+                                            <br>
+                                            <p>Club officers and selected members attend the annual oSTEM National Conference, in which oSTEM chapters from universities around the world attend the weekend-long conference. I was lucky enough to attend as a representative at the 2019 conference in Detroit, as well as the virtual one in 2020.</p>
+                                        </div>
                                         </div>
                                     </div>
 
                                     <!-- UNL GDC -->
                                     <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
-                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
                                         <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/UNL_game_dev_logo.jpg">
                                         </div>
                                         <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
                                         <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> UNL Game Development Club </h2>
                                         <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Member</h3>
-                                        <p class="text-base font-medium leading-relaxed text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam totam, ipsam assumenda possimus dicta vitae iste, nulla odit fuga dolorum facilis quasi hic. Aut neque soluta, aliquam minima nemo dolor!</p>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>The Game Development Club is an RSO dedicated to providing a community and space for students to develop video games of all shapes and sizes. From 4X to Visual Novel, various games of all genres are pitched, teams are formed, and development occurs throughout the year in small teams.</p>
+                                            <br>
+                                            <p>They also attend Game Jams, which are essentially hackathons dedicated to game-making. I was fortunate to attend the K-State Game Jam in January of 2020 with fellow members of the club. Our team won 3rd overall, and won the "Best&nbspA.I" award as well.</p>
+                                        </div>
                                         </div>
                                     </div>
 
                                     <!-- FLUFF -->
                                     <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
-                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
                                         <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/lmao-logo.jpg">
                                         </div>
                                         <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
                                         <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">FLUFF</h2>
                                         <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">President & Co-Founder</h3>
-                                        <p class="text-base font-medium leading-relaxed text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam totam, ipsam assumenda possimus dicta vitae iste, nulla odit fuga dolorum facilis quasi hic. Aut neque soluta, aliquam minima nemo dolor!</p>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>FLUFF is a interest-based club that focuses on anthropormorphic media and content. We seek to promote activity, engagement, and content-creation within this diverse and creative community, as well as sharing information and news.</p>
+                                            <br>
+                                            <p>Sadly we were not able to hold any in-person meetings, as our RSO was just established right as the COVID-19 pandemic hit, but we plan to hold meetings as UNL moves back to in-person classes and permits RSOs to meet in-person once again.</p>
+                                        </div>
                                         </div>
                                     </div>
+                                    <!-- Lobve -->
 
                                 </div>
                             </section>
                         </div>
                     </div>
+
+                    <!-- Honors div -->
+                    <div class='p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl md:sticky md:top-0' id='achievements-card'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Honors</h1>
+                        <div class="container items-center px-5 py-3">
+                            <!-- Projects Content -->
+                            <section class="text-gray-700 ">
+                                <div class="container flex flex-col items-center px-2 md:px-10 py-8 mx-auto">
+                                    <div class="flex flex-col w-full mb-8 text-center">
+                                        <div class="w-full mx-auto">
+                                            <!-- Intro Header -->
+                                        <h2 class="mx-auto mb-2 text-xl font-base leading-none tracking-tighter text-gray-700 italic">Things I'm proud to be a part of</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Mini Header -->
+                                    <div class="flex flex-col items-center pb-4 mx-auto mb-10 border-b border-gray-200 sm:flex-row">
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-xl text-center leading-none text-black lg:text-2xl font-bold tracking-wide text-black uppercase">Academic Societies</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- Raikes -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/Raikes.jpg">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Raikes School</h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Student</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>Part of Cohort 2019, The <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/">Raikes School</a> is a highly selective school within UNL that teaches an interdisciplinary program of computer science and business. It emphasizes project-based learning and hands-on experience with it's self-contained project based curriculum, as well as 2 full years of <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="">Design&nbspStudio</a> for students to get cutting-edge industry experience 2 full years before graduating.</p>
+                                            <br>
+                                            <p>With two years of internship experience under my belt, I am eager to jump into Design Studio this semester, and am hoping to work on projects involving machine learning and generative, dynamic consumer-content.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- UNL GDC -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/UNL_logo.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> UNL Honors Program </h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Student</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>I'm a part of UNL's own University-wide <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/">Honors&nbspProgram</a> is a highly selective school within UNL that teaches an interdisciplinary program of computer science and business. It emphasizes project-based learning and hands-on experience with it's self-contained project based curriculum, as well as 2 full years of <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="">Design&nbspStudio</a> for students to get cutting-edge industry experience 2 full years before graduating.</p>
+                                            <br>
+                                            <p>With two years of internship experience under my belt, I am eager to jump into Design Studio this semester, and am hoping to work on projects involving machine learning and generative, dynamic consumer-content.</p>
+                                        </div>                                        
+                                        </div>
+                                    </div>
+
+                                    <!-- UNL GDC -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/graphic-scholarship.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Scholarhips</h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Recepient</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <section class="text-blueGray-600 ">
+                                                <div class="container px-1 py-2 mx-auto">
+                                                  <div class="w-full mx-auto">
+                                                    <table class="w-full text-left whitespace-no-wrap table-auto">
+                                                      <thead>
+                                                        <tr class='text-center'>
+                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">Name</th>
+                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2019</th>
+                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2020</th>
+                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2021</th>
+                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2022</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr class="items-center">
+                                                          <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/george-beadle-scholarship-guidelines-2020-2021">George Beadle</a></td>
+                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                        </tr>
+                                                        <tr class="items-center">
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/husker-heritage-scholarship-guidelines-2020-2021">Husker Heritage</a></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                        </tr>
+                                                        <tr class="items-center">
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/applicant-information">Raikes</a></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                        </tr>
+                                                        <tr class="items-center">
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/academics">Honors</a></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                        </tr>
+                                                        <tr class="items-center">
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://math.unl.edu/scholarships-and-aid">S&H Jeans</a></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img src="images/doubts-button.png" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" alt="question mark"></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                              </section>                                    
+                                        </div>                                        
+                                        </div>
+                                    </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
                 <!-- Achievements div -->
-                <div class='p-6 lg:ml-10 md:ml-6 mt-8 md:mt-0 rounded-md shadow-md bg-gray-100 text-center text-base' id='work-card'>
+                <div class='py-6 px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 mt-8 md:mt-0 rounded-md shadow-md bg-gray-100 text-center text-base' id='work-card'>
                     <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2'>Work</h1>
 
-                    <div class="container items-center px-5 py-3">
+                    <div class="container items-center px-1 sm:px-5 py-3">
 
-                        <!-- Flywheel Card -->    
+                        <!-- FNBO Card -->    
                         <div class="flex flex-wrap ">
-                        <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl lg:w-4/5">
+                        <div class="w-full my-8 mx-0 lg:mx-auto bg-white border rounded-lg shadow-xl">
                             <div class="p-6 text-center">
                             <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/FNBO_logo.jpg">
                             <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">First National Bank of Omaha</h2>
@@ -171,6 +307,21 @@
                                     as important as the lines of code aboard the ISS, it has been a tremendous experience writing software for a service that is as crucial as FNBO's, and I hope to
                                     incorporate my newfound knowledge of testing automation into future and existing passion projects of mine.
                                 </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Writing integration tests for various aspects of a front-end web portal using Selenium in Java</li>
+                                        <li>Tailoring tests to work in a variety of environments and browsers, such as Chrome, Edge, FF, IE, and Opera</li>
+                                        <li>Communicating vulnerabilities and bugs to developers</li>
+                                        <li>Analyzing automated test fails and successes to track issues</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Java</li>
+                                        <li>Selenium</li>
+                                        <li>QAComplete (Legacy Tests)</li>
+                                        <li>Python</li>
+                                        <li>Git</li>
+                                    </ul>
                             </div>
                             </div>
                         </div>
@@ -179,7 +330,7 @@
                     
                     <!-- Ameritas Card -->    
                     <div class="flex flex-wrap ">
-                        <div class="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl lg:w-4/5">
+                        <div class="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl">
                             <div class="p-6 text-center">
                                 <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/ameirtas_logo.png">
                                 <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">Ameritas</h2>
@@ -213,7 +364,7 @@
 
                     <!-- UNL CSCE Teaching Assistant Card -->    
                     <div class="flex flex-wrap ">
-                        <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl lg:w-4/5">
+                        <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
                             <div class="p-6 text-center">
                             <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/UNL_logo.png">
                             <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">UNL CSCE & Raikes School</h2>
@@ -236,6 +387,7 @@
                                 </p>
                                 <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
                                 <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                    <li>Conducting special topics lectures</li>
                                     <li>Conducting labs</li>
                                     <li>Holding office hours</li>
                                     <li>Grading assignments</li>
@@ -259,31 +411,98 @@
 
                         <!-- Flywheel Card -->    
                         <div class="flex flex-wrap ">
-                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl lg:w-4/5">
+                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
                                 <div class="p-6 text-center">
                                 <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/flywheel_logo.png">
                                 <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">Flywheel</h2>
                                 <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Software Engineering Intern</h3>
                                 <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">May 2020 - August 2020</h4>
-                                <p class="mb-3 text-base leading-relaxed text-gray-600"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae earum ipsa officiis id magnam ab atque voluptatum velit repudiandae esse facere, omnis recusandae modi, animi illum officia praesentium consequuntur quisquam! </p>
-                                <p></p>
+                                <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                    <p class="mb-3 pb-2">My first internship was as a Software Engineering Intern at Flywheel, a premium WordPress Hosting company based in Omaha.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        I had barely gotten my feet wet with web developlment by the start of my internship, and thus learned a TON about web applications and how you 
+                                        can quite literally put anything online. It was what really ignited my passion for web development, and gave me a great introduction to 
+                                        working in an agile tech startup.  
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        It was actually beneficial with my internship being remote, as I was able to be both a member of a standard development, specifically on the 
+                                        team that built and maintained the customer support dashboard and admin tools. I was able to dive headfirst into both frontend and backend
+                                        development, completing tickets for both on our Jira board.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        My other team was a summer-long intern project, which involved incorporating the Divi WordPress theme into Flywheel's site spinup process.
+                                        It was the first time Flywheel had partnered with a WordPress theme company, and was quite the project for interns to take on! I was the lead
+                                        engineer on the team, and I gained tremendous leadership and development experience by fully integrating into every part of the projects process,
+                                        from initial conception and prototyping to the final touches and handoff. 
+                                    </p>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Participating in agile ceremonies</li>
+                                        <li>Completing both front and back end tasks</li>
+                                        <li>Communicating with stakeholders</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Frameworks</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>JavaScript (Vue.js)</li>
+                                        <li>Ruby (Ruby on Rails Framework)</li>
+                                        <li>HAML / SCSS</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </div>
                                 </div>
                             </div>
                             </div>
 
                         <!-- Code Hero Academy Card -->    
                         <div class="flex flex-wrap ">
-                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl lg:w-4/5">
+                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
                                 <div class="p-6 text-center">
                                 <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/code_hero_logo.png">
                                 <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">Code Hero Academy</h2>
                                 <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Co-Founder & Curriculum Designer</h3>
                                 <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">June 2018 - August 2019</h4>
-                                <p class="mb-3 text-base leading-relaxed text-gray-600"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae earum ipsa officiis id magnam ab atque voluptatum velit repudiandae esse facere, omnis recusandae modi, animi illum officia praesentium consequuntur quisquam! </p>
-                                <p></p>
+                                <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                    <p class="mb-3 pb-2">Code Hero Academy was born out of a frustration for a lack of computer science education within my hometown's education system.
+                                        Ever since I was in middle school, computers fascinated me and I was eager to learn more about them, but aside from the occasional trip to the media
+                                        center to print something, our system had next to no educational resources for students like me.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        I took matters into my own hands, buying a cheap $200 laptop to dive into programming myself. After a couple years of working
+                                        landscaping jobs around my neighborhood in the Spring, Summer, and Fall, I had saved up enough money to build my own desktop. It was here that I 
+                                        really dove headfirst into coding with various projects, including a (terrible) Terraria clone.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        The summer going into my Senior year I was looking for a chance to put my budding programming skills to use. It was here I met Venkateswara and Naga Kakula,
+                                        two people who shared my frustrations with the lack of CS opportunity in my hometown. We founded Code Hero Academy together to fix this.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        Using a project-based learning system, as opposed to the classroom-style method of teaching that was the norm for other learning academies, we 
+                                        were able to not only teach students concepts quicker, but get them actually <em>excited</em> about learning. From building their own Amazon
+                                        Alexa with a Raspberry Pi, to making a Fortnite Clone in Unity, it was amazing what these students could do when given the opportunity.
+                                    </p>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Curriculum creation</li>
+                                        <li>Lesson instruction</li>
+                                        <li>Student mentoring</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Topics Instructed</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Python</li>
+                                        <li>C# (Unity)</li>
+                                        <li>Shell Scripting (Raspberry Pi)</li>
+                                        <li>Robotics</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Bonus</h5>
+                                    <p class="mb-2 pb-2">
+                                        Being the first learning academy in our area focused on computer science, we attracted the attention of my district's rotary, as well as
+                                        our US House Representative, Angie Craig! I got to personally talk with her about the issues with a lack of curriculum concerning computer
+                                        programming in both middle and high school.
+                                    </p>
                                 </div>
                             </div>
-                            </div>
+                        </div>
 
                 </div>
             </div>
