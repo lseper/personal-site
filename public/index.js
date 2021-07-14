@@ -1,0 +1,64 @@
+window.addEventListener('resize', () => {
+    if(window.innerWidth >= 768) {
+        showAll();
+    } else {
+        showDiv(shownDivs);
+    }
+})
+
+let shownDivs = [0];
+
+const divs = [
+    { id: "about-div",
+    show: "block"}, 
+    { id: "clubs-div",
+    show: "block"}, 
+    { id: "honors-div",
+    show: "block"}, 
+    { id: "scholarships-flex",
+    show: "flex"}, 
+    { id: "work-div",
+    show: "block"}
+]
+
+function showDiv(div_nums) {
+    for(let i = 0; i < divs.length; i++){
+        const divObj = divs[i];
+        if(div_nums.some(e => e === i)) {
+            const div = document.getElementById(divObj.id);
+            div.style.display = divObj.show;
+        } else {
+            document.getElementById(divObj.id).style.display = "none";
+        }
+    }
+}
+
+function showAll() {
+    divs.forEach(e => document.getElementById(e.id).style.display = e.show);
+}
+
+function showAbout() {
+    showDiv([0]);
+    shownDivs = [0];
+}
+
+function showClubs() {
+    showDiv([1]);
+    shownDivs = [1];
+}
+
+function showHonors() {
+    showDiv([2, 3]);
+    shownDivs = [2, 3];
+}
+
+function showWork() {
+    showDiv([4]);
+    shownDivs = [4];
+}
+
+// about-div
+// clubs-div
+// honors-div
+// scholarships-flex
+// work-div

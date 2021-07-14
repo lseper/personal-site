@@ -10,18 +10,6 @@ Document
 /**
 Use a better box model (opinionated).
 */
-.header {
-  background-image: url('images/hall-kauffman.jpg');
-  background-size: cover;
-}
-
-.blur {
-  backdrop-filter: blur(4px);
-}
-
-.profieImage {
-  background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%) /* ffffff44*/
-}
 
 *,
 *::before,

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="background.css">
 </head>
 
 <body class='text-gray-700 font-body'>
@@ -44,29 +45,34 @@
     <div class='bg-gray-200 lg:px-16 pb-10 text-center'>
         <div class='flex-initial 2xl:w-3/4 xl:w-full xl:m-auto'>
             <!-- Part below images (only visible on mobile)-->
-            <nav class='flex flex-row justify-around lg:justify-between text-lg md:text-2xl'>
+            <nav class='flex flex-row justify-around lg:justify-between text-lg md:text-2xl md:hidden'>
                 <!-- Link tags -->
-                <div class='w-1/4 md:w-1/6 pb-4 px-3 pt-3 rounded-b-full bg-blue-600 text-white font-semibold'>
-                    <h2 class='mt-2 md:m-3'>
+                <button onClick="showAbout()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-blue-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
                         About
                     </h2>
-                </div>
-                <a href='projects.html' class='w-1/4 md:w-1/6 pb-4 pl-3 pr-3 pt-3 rounded-b-full bg-purple-600 text-white font-semibold'>
-                    <h2 class='mt-2 md:m-3'>
-                        Projects
+                </button>
+                <button onClick="showWork()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-purple-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Work
                     </h2>
-                </a>
-                <div class='w-1/4 md:w-1/6 pb-4 pl-3 pr-3 pt-3 rounded-b-full bg-green-600 text-white font-semibold'>
-                    <h2 class='mt-2 md:m-3'>
-                        Blog
+                </button>
+                <button onClick="showClubs()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-green-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Activity
                     </h2>
-                </div>
+                </button>
+                <button onClick="showHonors()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-green-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Honors
+                    </h2>
+                </button>
             </nav>
             <!-- Start of Info Div -->
             <div class='flex flex-wrap md:flex-nowrap lg:justify-between xl:pt-10 pt-4 px-4 lg:px-0'>
-                <div class='flex flex-col' id='cards-inner'>
+                <div class='flex flex-col' id='body-wrapper'>
                     <!-- About div -->
-                    <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='about-card'>
+                    <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='about-div'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>About</h1>
                         <!-- About Content -->
                         <section class="text-gray-700 ">
@@ -84,8 +90,8 @@
                             </div>
                           </section>                
                     </div>
-                    <!-- Involvements div -->
-                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='achievements-card'>
+                    <!-- Involvements div (hidden in medium and below screens) -->
+                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='clubs-div'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Involvements</h1>
                         <div class="container items-center px-5 py-3">
                             <!-- Projects Content -->
@@ -139,7 +145,7 @@
                                     <!-- FLUFF -->
                                     <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
                                         <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
-                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/lmao-logo.jpg">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/fluff_mascot.jpg">
                                         </div>
                                         <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
                                         <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">FLUFF</h2>
@@ -158,8 +164,8 @@
                         </div>
                     </div>
 
-                    <!-- Honors div -->
-                    <div class='p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl md:sticky md:top-0' id='achievements-card'>
+                    <!-- Honors div (hidden when medium or smaller)-->
+                    <div class='p-6 mb-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='honors-div'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Honors</h1>
                         <div class="container items-center px-5 py-3">
                             <!-- Projects Content -->
@@ -209,79 +215,82 @@
                                         </div>                                        
                                         </div>
                                     </div>
-
-                                    <!-- UNL GDC -->
-                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
-                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
-                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/graphic-scholarship.png">
-                                        </div>
-                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
-                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Scholarhips</h2>
-                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Recepient</h3>
-                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
-                                            <section class="text-blueGray-600 ">
-                                                <div class="container px-1 py-2 mx-auto">
-                                                  <div class="w-full mx-auto">
-                                                    <table class="w-full text-left whitespace-no-wrap table-auto">
-                                                      <thead>
-                                                        <tr class='text-center'>
-                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">Name</th>
-                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2019</th>
-                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2020</th>
-                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2021</th>
-                                                          <th class="px-4 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2022</th>
-                                                        </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                        <tr class="items-center">
-                                                          <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/george-beadle-scholarship-guidelines-2020-2021">George Beadle</a></td>
-                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                          <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                        </tr>
-                                                        <tr class="items-center">
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/husker-heritage-scholarship-guidelines-2020-2021">Husker Heritage</a></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                        </tr>
-                                                        <tr class="items-center">
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/applicant-information">Raikes</a></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                        </tr>
-                                                        <tr class="items-center">
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/academics">Honors</a></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                        </tr>
-                                                        <tr class="items-center">
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://math.unl.edu/scholarships-and-aid">S&H Jeans</a></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
-                                                            <td class="px-4 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img src="images/doubts-button.png" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" alt="question mark"></td>
-                                                        </tr>
-                                                      </tbody>
-                                                    </table>
-                                                  </div>
-                                                </div>
-                                              </section>                                    
-                                        </div>                                        
-                                        </div>
-                                    </div>
                             </section>
                         </div>
                     </div>
+
+                    <!-- Scholarships Table (hidden when medium or smaller)-->
+                    <div class="flex-grow-1 bg-gray-100 rounded-md shadow-md md:sticky md:top-0 hidden md:flex" id="scholarships-flex">
+                        <div class="pt-10 flex-col flex items-center px-3 pb-10 mx-auto mb-10">
+                            <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/graphic-scholarship.png">
+                            </div>
+                            <div class="flex-grow mt-6 text-center">
+                            <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Scholarhips</h2>
+                            <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Recepient</h3>
+                            <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                <section class="text-blueGray-600 ">
+                                    <div class="container px-1 py-2 mx-auto">
+                                      <div class="w-full mx-auto">
+                                        <table class="w-full text-left whitespace-no-wrap table-auto">
+                                          <thead>
+                                            <tr class='text-center'>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">Name</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2019</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2020</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2021</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2022</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr class="items-center">
+                                              <td class="pl-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/george-beadle-scholarship-guidelines-2020-2021">George Beadle</a></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/husker-heritage-scholarship-guidelines-2020-2021">Husker Heritage</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/applicant-information">Raikes</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/academics">Honors</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://math.unl.edu/scholarships-and-aid">S&H Jeans</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img src="images/doubts-button.png" class=" w-5 h-5 sm:w-6 sm:h-6 mx-auto rounded-full" alt="question mark"></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </section>                                    
+                            </div>                                        
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Achievements div -->
-                <div class='py-6 px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 mt-8 md:mt-0 rounded-md shadow-md bg-gray-100 text-center text-base' id='work-card'>
+
+                <!-- Work div (hidden when medium or smaller)-->
+                <div class='py-6 px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 mt-8 md:mt-0 rounded-md shadow-md bg-gray-100 text-center text-base hidden md:block' id="work-div">
                     <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2'>Work</h1>
 
                     <div class="container items-center px-1 sm:px-5 py-3">
