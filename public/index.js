@@ -9,11 +9,24 @@ window.addEventListener('resize', () => {
 const phone = "612-412-2313";
 const email = "seperliam@gmail.com";
 
+const onCopyText = "copied!"
+
 async function copyPhone() {
+    replaceText("phone");
     await navigator.clipboard.writeText(phone);
 }
 
+async function replaceText(id) {
+    const previousText = document.getElementById(id).innerText;
+    document.getElementById(id).innerText = onCopyText;
+    console.log(previousText);
+    // wait for two seconds
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    document.getElementById(id).innerText = previousText;
+}
+
 async function copyEmail() {
+    replaceText("email");
     await navigator.clipboard.writeText(email);
 }
 
