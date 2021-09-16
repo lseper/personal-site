@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="background.css">
+    <!-- modal stuff -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body class='text-gray-700 font-body'>
@@ -521,6 +524,35 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!--modal-->
+    <div id="zeldaModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="message-container fade-in">
+        <p class="modal-message">
+            <span>it's </span>
+            <span>dangerous </span>
+            <span>to </span>
+            <span>go </span>
+            <br>
+            <span>alone! </span>
+            <span>take </span>
+            <span>this.</span>
+        </p>
+        </div>
+        <div class="icon-container">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id='flame-one' class="flame image">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/96970eadd5059c2b0e5f2884ac85a1392f3b633d/assets/oldman.svg" class="image" id="old-man">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id="flame-two" class="flame image">
+        </div>
+        <div class="resume-container">
+        <img id="sword" src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/sword.jpg">
+        <a href="resume.pdf" id="resume">My Resume</a>
+        </div>
+    </div>
+
     </div>
     <script src='index.js'></script>
 </body>

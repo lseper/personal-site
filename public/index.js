@@ -81,6 +81,38 @@ function showWork() {
     shownDivs = [4];
 }
 
+// modal js 
+// Get the modal
+const modal = document.getElementById("zeldaModal");
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  document.body.classList.remove('blackout')
+}
+
+const exitEvent = e => {
+  if (!e.toElement && !e.relatedTarget) {
+    document.removeEventListener('mouseout', exitEvent);
+    
+    modal.style.display = "block";
+    document.body.classList.add('blackout');
+  }
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove('blackout')
+  }
+} 
+
+document.addEventListener('mouseout', exitEvent);
+
 // about-div
 // clubs-div
 // honors-div
