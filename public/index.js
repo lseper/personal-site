@@ -140,7 +140,7 @@ const exitEvent = e => {
 if(!getCookie("resumeModalSeen")){
     setTimeout(() => {
         document.addEventListener("mouseout", exitEvent);
-    }, 1000);
+    }, 8000);
 }
 
 // about-div
