@@ -88,30 +88,60 @@ const modal = document.getElementById("zeldaModal");
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
+// cookie setting for modal
+const setCookie = (cname, cvalue, exdays) => {
+    let expires = "";
+
+    if (exdays) {
+        let day = new Date();
+        day.setTime(day.getTime() + exdays * 24 * 60 * 60 * 1000);
+        expires = `expires=${day.toUTCString()}`;
+    }
+    document.cookie = `${cname}=${cvalue};${expires};path=/`;
+};
+
+const getCookie = (cname) => {
+    let ca = document.cookie.split(";");
+    const foundCookie = ca.find(e => {
+        const splitEl = e.split("=");
+        return splitEl[0] === cname;
+    })
+    // if we found a cookie, return the value of that cookie
+    if(foundCookie != undefined){
+        return foundCookie.split("=")[1] === "true";
+    }
+    return null;
+};
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
   document.body.classList.remove('blackout')
 }
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.classList.remove('blackout')
+    }
+}
+
 const exitEvent = e => {
-  if (!e.toElement && !e.relatedTarget) {
+  if (!e.toElement && !e.relatedTarget && e.clientY < 5) {
     document.removeEventListener('mouseout', exitEvent);
     
     modal.style.display = "block";
     document.body.classList.add('blackout');
+    setCookie("resumeModalSeen", true, 7);
   }
 };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    document.body.classList.remove('blackout')
-  }
-} 
-
-document.addEventListener('mouseout', exitEvent);
+if(!getCookie("resumeModalSeen")){
+    setTimeout(() => {
+        document.addEventListener("mouseout", exitEvent);
+    }, 1000);
+}
 
 // about-div
 // clubs-div
