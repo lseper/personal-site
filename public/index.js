@@ -42,7 +42,11 @@ const divs = [
     { id: "scholarships-flex",
     show: "flex"}, 
     { id: "work-div",
-    show: "block"}
+    show: "block"},
+    {
+        id: "projects-div",
+        show: "block"
+    }
 ]
 
 function showDiv(div_nums) {
@@ -79,6 +83,11 @@ function showHonors() {
 function showWork() {
     showDiv([4]);
     shownDivs = [4];
+}
+
+function showProjects() {
+    showDiv([5]);
+    shownDivs = [5];
 }
 
 // modal js 

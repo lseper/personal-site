@@ -66,6 +66,11 @@
                         Work
                     </h2>
                 </button>
+                <button onClick="showProjects()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-red-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Projects
+                    </h2>
+                </button>
                 <button onClick="showClubs()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-green-600 text-white font-semibold'>
                     <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
                         Activity
@@ -79,7 +84,7 @@
             </nav>
             <!-- Start of Info Div -->
             <div class='flex flex-wrap md:flex-nowrap lg:justify-between xl:pt-10 pt-4 px-4 lg:px-0'>
-                <div class='flex flex-col' id='body-wrapper'>
+                <div class='flex flex-col w-full' id='body-wrapper'>
                     <!-- About div -->
                     <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='about-div'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>About</h1>
@@ -99,11 +104,146 @@
                             </div>
                           </section>                
                     </div>
+
+                    <!-- Projects Div -->
+                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='projects-div'>
+                        <h1 class='text-4xl mb-6 md:text-5xl lg:text-6xl font-bold text-black'>Projects</h1>
+
+                        <div class="flex flex-col w-full mb-4 text-center">
+                            <div class="w-full mx-auto">
+                                <!-- Intro Header -->
+                            <h2 class="mx-auto mb-2 text-xl font-base leading-none tracking-tighter text-gray-700 italic">Cool stuff I've made</h2>
+                            </div>
+                        </div>
+                        
+                        <!-- Slipstream Card -->
+                        <div class="relative mb-10 flex max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                            <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                            <img
+                                src="images/slipstream-showcase.gif"
+                                alt="ui/ux review check"
+                            />
+                            <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                            </div>
+                            <div class="p-6">
+                            <div class="mb-3 flex items-center justify-between">
+                                <h5 class="block text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                Slipstream
+                                </h5>
+                                <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                    <a href="https://github.com/danielnoon/slipstream" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                        <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                        </svg>Source</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                                Slipstream is a tournament management solution for non-traditional tournaments written in Typescript. Full support added for Mariokart 8 Deluxe and Mariokart Wii tournaments. Created originally for the UNL eSports Club and Mariokart community, adopted at over 10 Midwestern Universities.
+                            </p>
+                            <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-sky-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">React</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Ionic</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-orange-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Zustand</div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="p-6 pt-3">
+                            <a href="https://slipstreamapp.net"
+                                class="block w-full select-none rounded-lg bg-green-500 py-3.5 px-7 text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                type="button"
+                                data-ripple-light="true"
+                            >
+                                Try it out!
+                            </a>
+                            </div>
+                        </div>
+
+                        <!-- Raytracer Card -->
+                        <div class="relative mb-10 flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                            <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                            <img
+                                src="images/raytracer-output.png"
+                                alt="ui/ux review check"
+                            />
+                            <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                            </div>
+                            <div class="p-6">
+                            <div class="mb-3 flex items-center justify-between">
+                                <h5 class="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                Raytracer
+                                </h5>
+                                <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                    <a href="https://github.com/lseper/raytracer" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                        <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                        </svg>Source</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                                A multithreaded raytracer written from scratch in Rust. Supports camera movement, dynamic focal length, metallic, glass, and lambertian materials, and thread tailorability.
+                            </p>
+                            <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-orange-800 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Rust</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Tag Feud Card -->
+                        <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                          <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                          <img
+                              src="images/art-tag-showcase.gif"
+                              alt="ui/ux review check"
+                          />
+                          <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                          </div>
+                          <div class="p-6">
+                          <div class="mb-3 flex items-center justify-between">
+                              <h5 class="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                              Art Feud
+                              </h5>
+                              <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                  <a href="https://github.com/lseper/art-tag-feud" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                      </svg>Source</span>
+                                  </a>
+                              </p>
+                          </div>
+                          <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                              A web-based multiplayer game written in Typescript centered around guessing meta tags on digital art pieces faster than your opponents.
+                          </p>
+                          <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-sky-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">React</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-600 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Express</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-green-700 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">Socket.io</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-900 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">Zod</div>
+                                </div>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+
+
+
                     <!-- Involvements div (hidden in medium and below screens) -->
                     <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='clubs-div'>
                         <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Involvements</h1>
                         <div class="container items-center px-5 py-3">
-                            <!-- Projects Content -->
+                            <!-- Involvements Content -->
                             <section class="text-gray-700 ">
                                 <div class="container flex flex-col items-center px-2 py-8 mx-auto">
                                     <div class="flex flex-col w-full mb-8 text-center">
