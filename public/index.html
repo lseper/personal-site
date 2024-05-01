@@ -495,8 +495,47 @@
                     </div>
                 </div>
 
+                
                 <!-- Work div (hidden when medium or smaller)-->
-                <div class='py-6 px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 mt-8 md:mt-0 rounded-md shadow-md bg-gray-100 text-center text-base hidden md:block' id="work-div">
+                <div class='px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 md:mt-0 text-base hidden md:block'>
+                    
+                    <!-- Blog Post div -->
+                    <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md pt-6 text-center text-xl md:text-2xl xl:text-3xl' style='background-color: antiquewhite;' id='blog-div'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Random Thought</h1>
+                        <!-- About Content -->
+                        <section class="text-gray-700 ">
+                            <div class="container flex flex-col items-center px-5 pt-8 mx-auto">
+                              <div class="flex flex-col w-full text-left ">
+                                <div class="w-full mx-auto lg:w-5/6">
+                                  <h2 class="mx-auto mb-4 text-2xl font-semibold leading-none tracking-tighter text-black title-font" id="thought-title">Excerpt Title</h2>
+                                  <div class="mx-auto text-base font-medium leading-relaxed text-gray-700">
+                                    <div id="thought-container">
+                                    </div>
+                                    <div class='pt-4 font-light' style="width: 100%; display: flex; flex-direction: row; justify-content: end;">
+                                        <div style="display: flex;flex-direction: column; align-items: end;">
+                                            <p class='pb-2' id="thought-date"></p>
+                                            <p class='text-gray-500' id="thought-location"></p>
+                                        </div>
+                                    </div>
+                                    <div class="inline-flex pt-6" style="justify-content: space-around; width: 100%">
+                                        <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l" onClick="getRandomPost()">
+                                          Random
+                                        </button>
+                                        <!-- <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l rounded-r" onClick="getPreviousPost()">
+                                          Prev
+                                        </button>
+                                        <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l rounded-r" onClick="getNextPost()">
+                                          Next
+                                        </button> -->
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>                
+                    </div>
+
+                <div class='rounded-md shadow-md bg-gray-100 pt-6 text-center text-base hidden md:block' id="work-div">
                     <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2'>Work</h1>
 
                     <div class="container items-center px-1 sm:px-5 py-3">
@@ -820,15 +859,43 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--modal-->
+    <!-- Zelda modal-->
+    <div id="zeldaModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="message-container fade-in">
+            <p class="modal-message">
+                <span>it's </span>
+                <span>dangerous </span>
+                <span>to </span>
+                <span>go </span>
+                <br>
+                <span>alone! </span>
+                <span>take </span>
+                <span>this.</span>
+            </p>
+            </div>
+            <div class="icon-container">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id='flame-one' class="flame image">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/96970eadd5059c2b0e5f2884ac85a1392f3b633d/assets/oldman.svg" class="image" id="old-man">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id="flame-two" class="flame image">
+            </div>
+            <div class="resume-container">
+            <img id="sword" src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/sword.jpg">
+            <a href="resume.pdf" id="resume">My Resume</a>
+            </div>
+        </div>
+    </div>
+
     <div id="zeldaModal" class="modal">
     <!-- Modal content -->
-    <div class="modal-content">
+        <div class="modal-content">
         <span class="close">&times;</span>
         <div class="message-container fade-in">
         <p class="modal-message">
