@@ -49,7 +49,7 @@ const thoughts = [
     },
     {
         title: "Do not be afraid of yourself!",
-        date: new Date(2024, 5, 1, 23, 28),
+        date: new Date(2024, 5, 4, 15, 5),
         location: "Mountain View, CA",
         content: `<p>For the longest time I thought my obsessive intensity about things many people thought mundane, difficult, and uninteresting was bad. My friend Spottacus 
         recently gave a <a href="https://www.youtube.com/watch?v=uE20gAvnru0&pp=ygUSc3BvdHRhY3VzIGJlcmtlbGV5">talk at Berkeley</a> that has resonated with my rather well.<p>
