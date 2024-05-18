@@ -32,7 +32,7 @@ const thoughts = [
     //     `
     // },
     {
-        title: "That Obra Dinn sure can return!",
+        title: "Lucas Pope's Return of the Obra Dinn",
         date: new Date(2024, 5, 1, 23, 28),
         location: "Mountain View, CA",
         content: `<p>My friend Sam asked if I wanted to play Return of the Obra Dinn, a game I'd seen through my studies of graphics programming.
