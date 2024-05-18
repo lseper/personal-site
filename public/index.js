@@ -1,36 +1,36 @@
 const thoughts = [
-    {
-        title: "Change",
-        date: new Date(2024, 4, 30, 16, 52),
-        location: "Mountain View, CA",
-        content: `<p>Change is the only constant there is in life.</p>
-        <br />
-        <p>For the longest time I have been afraid of it. People, interests, desires, it all changes.
-        Perhaps I'm not afraid of change, but rather that everything around me changes, yet I stay the same.
-        It seems my biggest fear is that I <em>won't</em> change. That I will become rendered obsolete by the world.</p>
-        <br />
-        <p>But if that is true, I think there is a strange comfort in that. You become the sole owner of yourself, of your being.
-        Your value is no longer tethered to that of others, and instead must blossom from the void within lest be consumed by madness.
-        It's terrifyingly beautiful.</p>
-        `
-    },
-    {
-        title: "Gilgamesh and Cybernetics",
-        date: new Date(2024, 4, 30, 17, 40),
-        location: "Mountain View, CA",
-        content: `<p>As technology progresses more and more, perhaps even the best of us will find ourselves obsolete. The last champions of humanity
-        rendered valueless by their very own ingenuity. And no, I don't mean it in the Skynet sense, if you compare quality of life differences
-        between the 1800s and now, it's clear that technology has been a net positive. I think it'll only "get better" physically, so to say. 
-        Maslow would be proud of our robot overlords! xD</p>
-        <br />
-        <p>But mentally, I can only think of it getting worse. Either that, or the whole cyber-chips-in-your-brain thing will happen, which is 
-        much more terrifying. Despite science fiction, I don't think doing so nullifies the human experience. You could argue the same with any 
-        technological advancement; Do I, visiting my boyfriend in San Francisco in the year 2024, sitting in a padded, cushioned chair, typing on 
-        a laser-cut and harmoniously designed computer keyboard, while a 144hz monitor refreshes each and every pixel so I can see each and every character
-        I type, experience something "less human" than Gilgamesh did in Sumeria? In fact, I'd argue I experience something quite similar to that of the next 
-        generation of cyborg humans, and that my experience is much more alike theirs than Gilgamesh's.</p>
-        `
-    },
+    // {
+    //     title: "Change",
+    //     date: new Date(2024, 4, 30, 16, 52),
+    //     location: "Mountain View, CA",
+    //     content: `<p>Change is the only constant there is in life.</p>
+    //     <br />
+    //     <p>For the longest time I have been afraid of it. People, interests, desires, it all changes.
+    //     Perhaps I'm not afraid of change, but rather that everything around me changes, yet I stay the same.
+    //     It seems my biggest fear is that I <em>won't</em> change. That I will become rendered obsolete by the world.</p>
+    //     <br />
+    //     <p>But if that is true, I think there is a strange comfort in that. You become the sole owner of yourself, of your being.
+    //     Your value is no longer tethered to that of others, and instead must blossom from the void within lest be consumed by madness.
+    //     It's terrifyingly beautiful.</p>
+    //     `
+    // },
+    // {
+    //     title: "Gilgamesh and Cybernetics",
+    //     date: new Date(2024, 4, 30, 17, 40),
+    //     location: "Mountain View, CA",
+    //     content: `<p>As technology progresses more and more, perhaps even the best of us will find ourselves obsolete. The last champions of humanity
+    //     rendered valueless by their very own ingenuity. And no, I don't mean it in the Skynet sense, if you compare quality of life differences
+    //     between the 1800s and now, it's clear that technology has been a net positive. I think it'll only "get better" physically, so to say. 
+    //     Maslow would be proud of our robot overlords! xD</p>
+    //     <br />
+    //     <p>But mentally, I can only think of it getting worse. Either that, or the whole cyber-chips-in-your-brain thing will happen, which is 
+    //     much more terrifying. Despite science fiction, I don't think doing so nullifies the human experience. You could argue the same with any 
+    //     technological advancement; Do I, visiting my boyfriend in San Francisco in the year 2024, sitting in a padded, cushioned chair, typing on 
+    //     a laser-cut and harmoniously designed computer keyboard, while a 144hz monitor refreshes each and every pixel so I can see each and every character
+    //     I type, experience something "less human" than Gilgamesh did in Sumeria? In fact, I'd argue I experience something quite similar to that of the next 
+    //     generation of cyborg humans, and that my experience is much more alike theirs than Gilgamesh's.</p>
+    //     `
+    // },
     {
         title: "That Obra Dinn sure can return!",
         date: new Date(2024, 5, 1, 23, 28),
@@ -47,21 +47,21 @@ const thoughts = [
         and swish and swash of the ocean really breathes life into the game.</p>
         `
     },
-    {
-        title: "Do not be afraid of yourself!",
-        date: new Date(2024, 5, 4, 15, 5),
-        location: "Mountain View, CA",
-        content: `<p>For the longest time I thought my obsessive intensity about things many people thought mundane, difficult, and uninteresting was bad. My friend Spottacus 
-        recently gave a <a href="https://www.youtube.com/watch?v=uE20gAvnru0&pp=ygUSc3BvdHRhY3VzIGJlcmtlbGV5">talk at Berkeley</a> that has resonated with my rather well.<p>
-        <br />
-        <p> For the longest time, I thought my feverish intensity and obsession was something I needed to reign in, but now I see that it's something I should <em>embrace</em>. 
-        So if you're reading this, embrace your interests! For the longest time I was afraid I was "missing out" on what life was "about" by obsessing over the things that 
-        interested me. But now I see that that is what life is to me. The joy of study and pursuit in itself are what I crave, and it's exhilirating to think of the possibilities 
-        that could come from that!</p>
-        <br />
-        <p>Carpe Diem!</p>
-        `
-    }
+    // {
+    //     title: "Do not be afraid of yourself!",
+    //     date: new Date(2024, 5, 4, 15, 5),
+    //     location: "Mountain View, CA",
+    //     content: `<p>For the longest time I thought my obsessive intensity about things many people thought mundane, difficult, and uninteresting was bad. My friend Spottacus 
+    //     recently gave a <a href="https://www.youtube.com/watch?v=uE20gAvnru0&pp=ygUSc3BvdHRhY3VzIGJlcmtlbGV5">talk at Berkeley</a> that has resonated with my rather well.<p>
+    //     <br />
+    //     <p> For the longest time, I thought my feverish intensity and obsession was something I needed to reign in, but now I see that it's something I should <em>embrace</em>. 
+    //     So if you're reading this, embrace your interests! For the longest time I was afraid I was "missing out" on what life was "about" by obsessing over the things that 
+    //     interested me. But now I see that that is what life is to me. The joy of study and pursuit in itself are what I crave, and it's exhilirating to think of the possibilities 
+    //     that could come from that!</p>
+    //     <br />
+    //     <p>Carpe Diem!</p>
+    //     `
+    // }
 ];
 
 window.addEventListener('resize', () => {
