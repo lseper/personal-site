@@ -43,6 +43,16 @@
         </li>
       </ul>
 
+      <!-- About Dialog -->
+       <!-- TODO:  make this disappear when clicking away from it -->
+       <div class="draggable" style="top: 25em; left: 50%; z-index: 1000;" id="about-dialog-container">
+           <div class="standard-dialog center column" style="width:30rem;" id="about-dialog">
+             <h1 class="dialog-text dialog-title">Hello!</h1>
+             <p class="dialog-text">I'm Liam, a Software Engineer / Artist in the San Francisco Bay Area.</p>
+             <p class="dialog-text">I made this website myself! Feel free to look around.</p>
+           </div>
+       </div>
+
       <!-- About / Projects / LinksWindow -->
       <div class="draggable" style="top: 5rem; left: 5rem;">
           <div class="window" style="width: 30rem;">
@@ -53,7 +63,7 @@
                   <!-- TODO: style me! -->
                   <ul role="menu-bar" class="details-bar-content">
                       <li role="menu-item" tabindex="0" aria-haspopup="false">
-                          About
+                        <a onclick="showAbout()">About</a>
                       </li>
                       <li role="menu-item" tabindex="0" aria-haspopup="true">
                           Work Experience
@@ -467,6 +477,7 @@
         </div> -->
     </div>
 
-    <script src="work.js"></script>
+    <script src="resume.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>

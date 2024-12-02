@@ -46,6 +46,7 @@ const workExperienceObject = {
 
 const workExperienceMenu = document.getElementById('work-experience-menu');
 const workExperienceScrollablePane = document.getElementById('work-experience-scrollable-pane');
+const aboutMenu = document.getElementById('about-menu');
 
 function showWorkExperience(id) {
     workExperienceObject[id].container.style.contentVisibility = 'visible';

@@ -188,6 +188,30 @@
     box-shadow: var(--box-shadow);
     background-color: var(--primary);
   }
+
+  .standard-dialog .dialog-text {
+    font-family: Chicago_12;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .standard-dialog .dialog-title {
+    font-size: 1.5em;
+  }
   
   .modal-dialog, .alert-box {
     width: auto;
