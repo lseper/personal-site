@@ -765,6 +765,20 @@
     overflow: visible;
 }
 
+.draggable-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable-icon label {
+    padding: 0.25em;
+    margin-top: 0.25em;
+    font-size: 1em;
+    color: var(--secondary);
+    font-family: Chicago_12;
+}
 /**
 * Window Pane Header Title
 * font-family: Chicago_12
@@ -790,6 +804,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.education {
+    padding-bottom: 0;
 }
 
 .window-pane-header-title h1 {
@@ -826,3 +844,34 @@
   font-size: 1.25em;
 }
 
+.window-pane-content h1 {
+  font-size: 1.5em;
+}
+
+.education-stat {
+    padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.education-stat-container {
+    display: flex;
+}
+
+.education-stat p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.education-stat .education-stat-divider {
+  border-bottom: 1.5px dotted var(--secondary);
+  flex-grow: 1;
+}
+
+.window-pane-content-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}

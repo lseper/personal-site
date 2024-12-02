@@ -43,20 +43,183 @@
         </li>
       </ul>
 
+      <div class="draggable" style="top: 5rem; right: 5rem;" id="resume-draggable" ondblclick="showWindow('about-work-projects-links-draggable')">
+        <div class="draggable-icon">
+          <img src="./icon/file-text.svg" alt="file icon" width="64" height="64">
+          <label>resume.txt</label>
+        </div>
+      </div>
+
+      <div class="draggable" style="top: 12rem; right: 5rem;" id="resume-draggable" ondblclick="showWindow('')">
+        <div class="draggable-icon">
+          <img src="./icon/file-graphic.svg" alt="graphic file icon" width="64" height="64">
+          <label>illustration.png</label>
+        </div>
+      </div>
+
+
+      <div class="draggable" style="top: 19rem; right: 5rem;" id="resume-draggable" ondblclick="showWindow('projects-draggable')">
+        <div class="draggable-icon">
+          <img src="./icon/file-text.svg" alt="graphic file icon" width="64" height="64">
+          <label>projects.txt</label>
+        </div>
+      </div>
+      
+      <div class="draggable" style="top: 50rem; right: 5rem;" id="trash-draggable" ondblclick="showWindow('about-work-projects-links-draggable')">
+        <div class="draggable-icon">
+          <img src="./icon/bin.svg" alt="trash bin icon" width="64" height="64">
+          <label>Trash</label>
+        </div>
+      </div>
+
       <!-- About Dialog -->
        <!-- TODO:  make this disappear when clicking away from it -->
-       <div class="draggable" style="top: 25em; left: 50%; z-index: 1000;" id="about-dialog-container">
+       <div class="draggable" style="top: 25em; left: 50%; z-index: 1000; content-visibility: hidden;" id="about-dialog-container">
            <div class="standard-dialog center column" style="width:30rem;" id="about-dialog">
              <h1 class="dialog-text dialog-title">Hello!</h1>
-             <p class="dialog-text">I'm Liam, a Software Engineer / Artist in the San Francisco Bay Area.</p>
+             <p class="dialog-text">I'm Liam, a Software Engineer / Artist from Minnesota.</p>
              <p class="dialog-text">I made this website myself! Feel free to look around.</p>
            </div>
        </div>
 
-      <!-- About / Projects / LinksWindow -->
-      <div class="draggable" style="top: 5rem; left: 5rem;">
+       <div class="draggable" style="top: 12rem; right: 15rem; content-visibility: visible;" id="projects-draggable">
+        <div class="window" style="width: 30rem;">
+          <div class="title-bar">
+            <button aria-label="Close" class="close" onclick="closeWindow('projects-draggable')"></button>
+            <h1 class="title">Projects</h1>
+          </div>
+          <div class="details-bar">
+            <ul role="menu-bar" class="details-bar-content">
+              <li role="menu-item" tabindex="0" aria-haspopup="false">
+                <a onclick="showProject('website')">This Website</a>
+              </li>
+              <li role="menu-item" tabindex="1" aria-haspopup="false">
+                <a onclick="showProject('slipstream')">Slipstream</a>
+              </li>
+              <li role="menu-item" tabindex="2" aria-haspopup="false">
+                <a onclick="showProject('rustracer')">Rustracer</a>
+              </li>
+              <li role="menu-item" tabindex="3" aria-haspopup="false">
+                <a onclick="showProject('tagFeud')">Tag Feud</a>
+              </li>
+            </ul>
+          </div>
+          <div class="window-pane" style="min-height: 200px; overflow-y: scroll;" id="projects-scrollable-pane">
+            <div class="window-pane-content" id="projects-content">
+
+              <!-- This Website -->
+              <div class="window-pane-content-container" id="website-content" style="content-visibility: hidden;">
+                <h1>This Website</h1>
+                <p>The website you're looking at right now!</p>
+                <div class="window-pane-content-divider"></div>
+                <h2>Features:</h2>
+                <ul>
+                  <li>Custom Macintosh Theme(s)</li>
+                  <li>Draggable Windows</li>
+                  <li>Emulated File System</li>
+                  <li>Rectangles with rounded corners!</li>
+                </ul>
+                <h2>Languages & Tools</h2>
+                <div class="window-pane-content-divider"></div>
+                <ul>
+                  <li>JavaScript / HTML / CSS</li>
+                  <li>React Three Fiber</li>
+                  <li>WebGPU</li>
+                  <li>Zustand</li>
+                  <li>Drei</li>
+                </ul>
+                <span class="window-pane-content-button-container field-row">
+                  <a class="btn" href="#">Try Me!</a>
+                  <a class="btn" href="https://github.com/lseper/personal-site">Github</a>
+                </span>
+              </div>
+
+              <!-- Slipstream -->
+              <div class="window-pane-content-container" id="slipstream-content" style="content-visibility: visible;">
+                <h1>Slipstream</h1>
+                <p>Slipstream is a tournament management solution for non-traditional tournament formats written in Typescript. Features full support for Mariokart 8 Deluxe and Mariokart Wii. Created for the UNL eSports Club and Mariokart community.</p>
+                <div class="window-pane-content-divider"></div>
+                <h2>Features:</h2>
+                <ul>
+                  <li>Full support for Mariokart 8 Deluxe and Mariokart Wii</li>
+                  <li>Swiss-based seeding rounds</li>
+                  <li>Custom ELO system</li>
+                  <li>Matchup auto-balancing</li>
+                  <li>Ladder based elimination rounds</li>
+                </ul>
+                <h2>Languages & Tools</h2>
+                <div class="window-pane-content-divider"></div>
+                <ul>
+                  <li>React</li>
+                  <li>Ionic</li>
+                  <li>Zustand</li>
+                </ul>
+                <span class="window-pane-content-button-container field-row">
+                  <a class="btn" href="https://www.slipstreamapp.net">Try Me!</a>
+                  <a class="btn" href="https://github.com/danielnoon/slipstream">Github</a>
+                </span>
+              </div>
+
+
+              <!-- Rustracer -->
+              <div class="window-pane-content-container" id="rustracer-content" style="content-visibility: hidden;">
+                <h1>Rustracer</h1>
+                <p>Rustracer is a memory safe, multi-threaded raytracer written from scratch in Rust.</p>
+                <div class="window-pane-content-divider"></div>
+                <h2>Features:</h2>
+                <ul>
+                  <li>Camera movement</li>
+                  <li>Dynamic focal length</li>
+                  <li>Metallic, glass, and lambertian materials</li>
+                  <li>Thread tailorability</li>
+                  <li>Scene saving and loading</li>
+                </ul>
+                <h2>Languages & Tools</h2>
+                <div class="window-pane-content-divider"></div>
+                <ul>
+                  <li>Rust</li>
+                </ul>
+                <span class="window-pane-content-button-container field-row">
+                  <a class="btn" href="https://github.com/lseper/raytracer">Github</a>
+                </span>
+              </div>
+
+              <!-- Tag Feud Card -->
+              <div class="window-pane-content-container" id="tag-feud-content" style="content-visibility: hidden;">
+                <h1>Tag Feud</h1>
+                <p>A web-based multiplayer game centered around guessing meta tags on digital art pieces faster than your friends.</p>
+                <div class="window-pane-content-divider"></div>
+                <h2>Features:</h2>
+                <ul>
+                  <li>Multiplayer game lobby</li>
+                  <li>Customizable game settings</li>
+                  <li>In-game scoreboard</li>
+                  <li>Fault tolerant server broadcasting</li>
+                  <li>Post game statistics</li>
+                </ul>
+                <h2>Languages & Tools</h2>
+                <div class="window-pane-content-divider"></div>
+                <ul>
+                  <li>React</li>
+                  <li>Express</li>
+                  <li>Socket.io</li>
+                  <li>Zod</li>
+                </ul>
+                <span class="window-pane-content-button-container field-row">
+                  <a class="btn" href="https://github.com/lseper/art-tag-feud">Github</a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+      <!-- About / Projects / Links Window -->
+      <div class="draggable" style="top: 5rem; left: 5rem; content-visibility: hidden;" onmousemove="drag(event)" id="about-work-projects-links-draggable">
           <div class="window" style="width: 30rem;">
               <div class="title-bar"> 
+                  <button aria-label="Close" class="close" onclick="closeWindow('about-work-projects-links-draggable')"></button>
                   <h1 class="title">Liam Seper</h1>
               </div>
               <div class="details-bar">
@@ -65,7 +228,7 @@
                       <li role="menu-item" tabindex="0" aria-haspopup="false">
                         <a onclick="showAbout()">About</a>
                       </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
+                      <li role="menu-item" tabindex="1" aria-haspopup="true">
                           Work Experience
                           <ul role="menu" id="work-experience-menu">
                           <li role="menu-item"><a onclick="showWorkExperience('hudl')">Hudl</a></li>
@@ -79,21 +242,8 @@
                           <li role="menu-item"><a onclick="showWorkExperience('codehero')">Code Hero Academy</a></li>
                           </ul>
                       </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
-                          Projects
-                          <ul role="menu">
-                          <li role="menu-item"><a href="#menu">Action</a></li>
-                          <li role="menu-item"><a href="#menu">Another Action</a></li>
-                          <li role="menu-item"><a href="#menu">Something else here</a></li>
-                          </ul>
-                      </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
-                          Links
-                          <ul role="menu">
-                          <li role="menu-item"><a href="#menu">You</a></li>
-                          <li role="menu-item"><a href="#menu">Get the</a></li>
-                          <li role="menu-item"><a href="#menu">Idea</a></li>
-                          </ul>
+                      <li role="menu-item" tabindex="2" aria-haspopup="false" onclick="showEducation()">
+                          Education
                       </li>
                   </ul>
               </div>
@@ -101,9 +251,44 @@
               <!-- TODO: style me! -->
               <div class="window-pane" style="height: 500px; overflow-y: scroll;" id="work-experience-scrollable-pane">
                 
+                  <!-- Education Panel -->
+                  <div class="window-pane-content-container" id="education-content" style="content-visibility: hidden;">
+                      <!-- TODO: style me! -->
+                       <div class="window-pane-header education">
+                         <span class="window-pane-header-title">
+                           <h1>University of Nebraska-Lincoln</h1>
+                           <label>B.S. Computer Science, Mathematics</label>
+                           <br>
+                          </span>
+                          <span class="window-pane-header-date-locale">
+                            <p>Lincoln, NE</p>
+                            <p>2019 - 2023</p>
+                          </span> 
+                        </div>
+                        <div class="window-pane-content">
+                          <div class="education-stat-container">
+                            <span class="education-stat">
+                              <p>Minor:</p>
+                              <p>Business</p>
+                            </span>
+                            <span class="education-stat">
+                              <p>GPA</p>
+                              <p>4.0</p>
+                            </span>
+                          </div>
+                          <p>Honors:</p>
+                          <ul>
+                            <li>Jeffery S. Raikes School of Computer Science and Management</li>
+                            <li>University Honors Program</li>
+                            <li>Dean's List</li>
+                            <li>George Beadle Scholar</li>
+                            <li>S&H Jeans Mathematics Scholarship</li>
+                          </ul>
+                      </div>  
+                  </div>
+
                   <!-- Hudl Panel -->
                   <div class="window-pane-content-container" id="hudl-content" style="content-visibility: visible;">
-                      <!-- TODO: style me! -->
                       <div class="window-pane-header">
                           <span class="window-pane-header-title">
                             <h1>Hudl</h1>
@@ -122,16 +307,22 @@
                             <h2>Responsibilities</h2>
                             <div class="window-pane-content-divider"></div>
                             <ul>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
-                                <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
+                                <li>Writing a cross-domain (mobile x smart TV) auth, notification, and navigation system</li>
+                                <li>Writing a full-stack system push notification management system</li>
                                 <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
                                 <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                                <li>Writing an analyst dashboard for annotating soccer games</li>
                             </ul>
                             <p>Additionally, I am involved in user testing via:</p>
                             <ul>
                                 <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
                                 <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
+                            </ul>
+                            <p>I've also been extensively involved in scaling our analyst operation in Mumbai, India. I've written tools to enable our analysts team to:</p>
+                            <ul>
+                              <li>Architecting a shared data schema for analysts to use when annotating games</li>
+                              <li>Integrating ML layers for automatically generating tags and summaries of games</li>
+                              <li>Writing a full-stack system for our analysts to review clips</li>
                             </ul>
                             <h2>Languages & Tools</h2>
                             <div class="window-pane-content-divider"></div>
@@ -479,5 +670,6 @@
 
     <script src="resume.js"></script>
     <script src="about.js"></script>
+    <script src="draggable.js"></script>
 </body>
 </html>
