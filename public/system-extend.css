@@ -740,3 +740,65 @@
     position: absolute;
     overflow: visible;
 }
+
+/**
+* Window Pane Header Title
+* font-family: Chicago_12
+* font-family: Chicago
+* font-family: Geneva_9
+* font-family: Monaco
+*/
+
+.window-pane-header {
+  font-family: Chicago_12;
+  font-style: italic;
+  font-size: 1em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1em 0 1em 0;
+}
+
+.window-pane-header-date-locale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.window-pane-header-title h1 {
+  font-style: normal;
+  font-size: 1em;
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.window-pane-header-title label {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.window-pane-header-date-locale p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.window-pane-content-divider {
+  border-top: 1.5px dotted var(--secondary);
+}
+
+.window-pane-content {
+  font-size: 0.8em;
+}
+
+.window-pane-content h2 {
+  font-size: 1.25em;
+}
+
