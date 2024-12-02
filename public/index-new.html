@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>System.css Starter</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="system-extend.css">
+</head>
+<body>
+    <!-- TODO: style me! -->
+    <div class="desktop">
+        <ul role="menu-bar">
+            <li role="menu-item" aria-haspopup="false"><img src="./icon/apple.svg" width='16' height='13' alt="apple icon"/></li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+          File
+          <ul role="menu">
+            <li role="menu-item"><a href="#menu">New (Cmd + N)</a></li>
+            <li role="menu-item"><a href="#menu">Open (Cmd + O)</a></li>
+            <li role="menu-item"><a href="#menu">Save (Cmd + S)</a></li>
+          </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+          Edit
+          <ul role="menu">
+            <li role="menu-item"><a href="#menu">Undo (Cmd + Z)</a></li>
+            <li role="menu-item"><a href="#menu">Redo (Cmd + Shift + Z)</a></li>
+            <li role="menu-item"><a href="#menu">Cut (Cmd + X)</a></li>
+            <li role="menu-item"><a href="#menu">Copy (Cmd + C)</a></li>
+            <li role="menu-item"><a href="#menu">Paste (Cmd + V)</a></li>
+          </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+          View
+          <ul role="menu">
+            <li role="menu-item"><a href="#menu">Zoom In (Cmd +)</a></li>
+            <li role="menu-item"><a href="#menu">Zoom Out (Cmd -)</a></li>
+          </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+          Special
+          <ul role="menu">
+            <li role="menu-item"><a href="#menu">Toggle Fun (Cmd + F)</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- About / Projects / LinksWindow -->
+      <div class="draggable" style="top: 5rem; left: 5rem;">
+          <div class="window" style="width: 30rem;">
+              <div class="title-bar"> 
+                  <h1 class="title">Liam Seper</h1>
+              </div>
+              <div class="details-bar">
+                  <!-- TODO: style me! -->
+                  <ul role="menu-bar" class="details-bar-content">
+                      <li role="menu-item" tabindex="0" aria-haspopup="false">
+                          About
+                      </li>
+                      <li role="menu-item" tabindex="0" aria-haspopup="true">
+                          Work Experience
+                          <ul role="menu" id="work-experience-menu">
+                          <li role="menu-item"><a onclick="showWorkExperience('hudl')">Hudl</a></li>
+                          <li role="menu-item" class="divider"></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('palantir')">Palantir</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('meta')">Meta</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('fnbo')">First National</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('ameritas')">Ameritas</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('csce')">UNL Computing Center</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('flywheel')">Flywheel</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('codehero')">Code Hero Academy</a></li>
+                          </ul>
+                      </li>
+                      <li role="menu-item" tabindex="0" aria-haspopup="true">
+                          Projects
+                          <ul role="menu">
+                          <li role="menu-item"><a href="#menu">Action</a></li>
+                          <li role="menu-item"><a href="#menu">Another Action</a></li>
+                          <li role="menu-item"><a href="#menu">Something else here</a></li>
+                          </ul>
+                      </li>
+                      <li role="menu-item" tabindex="0" aria-haspopup="true">
+                          Links
+                          <ul role="menu">
+                          <li role="menu-item"><a href="#menu">You</a></li>
+                          <li role="menu-item"><a href="#menu">Get the</a></li>
+                          <li role="menu-item"><a href="#menu">Idea</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- TODO: style me! -->
+              <div class="window-pane" style="height: 500px; overflow-y: scroll;" id="work-experience-scrollable-pane">
+                
+                  <!-- Hudl Panel -->
+                  <div class="window-pane-content-container" id="hudl-content" style="content-visibility: visible;">
+                      <!-- TODO: style me! -->
+                      <div class="window-pane-header">
+                          <span class="window-pane-header-title">
+                            <h1>Hudl</h1>
+                            <label>Software Engineer</label>
+                          </span>
+                          <span class="window-pane-header-date-locale">
+                            <p>Lincoln, NE</p>
+                            <p>Feb. 2024 - Present</p>
+                          </span>
+                      </div>
+                      <div class="window-pane-content-divider"></div>
+                      <div class="window-pane-content">
+                          <p>
+                              I am currently a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
+                            </p>
+                            <h2>Responsibilities</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                                <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
+                                <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
+                                <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
+                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                            </ul>
+                            <p>Additionally, I am involved in user testing via:</p>
+                            <ul>
+                                <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
+                                <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
+                            </ul>
+                            <h2>Languages & Tools</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Typescript</li>
+                                <li>React Native</li>
+                                <li>Zustand</li>
+                                <li>UI Kit</li>
+                                <li>GraphQL</li>
+                                <li>C# (.NET)</li>
+                            </ul>
+                        </div>  
+                  </div>
+              
+                  <!-- Palantir Panel -->
+                  <div class="window-pane-content-container" id="palantir-content" style="content-visibility: hidden;">
+                      <!-- TODO: style me! -->
+                      <div class="window-pane-header">
+                          <span class="window-pane-header-title">
+                            <h1>Palantir</h1>
+                            <label>Software Engineer</label>
+                          </span>
+                          <span class="window-pane-header-date-locale">
+                            <p>Lincoln, NE</p>
+                            <p>Feb. 2024 - Present</p>
+                          </span>
+                      </div>
+                      <div class="window-pane-content-divider"></div>
+                      <div class="window-pane-content">
+                          <p>
+                              I am currently a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
+                            </p>
+                            <h2>Responsibilities</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                                <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
+                                <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
+                                <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
+                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                            </ul>
+                            <p>Additionally, I am involved in user testing via:</p>
+                            <ul>
+                                <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
+                                <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
+                            </ul>
+                            <h2>Languages & Tools</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Typescript</li>
+                                    <li>React Native</li>
+                                    <li>Zustand</li>
+                                    <li>UI Kit</li>
+                                    <li>GraphQL</li>
+                                    <li>C# (.NET)</li>
+                                </ul>
+                        </div>
+                    </div>
+            
+                  <!-- Meta Panel -->
+                  <div class="window-pane-content-container" id="meta-content" style="content-visibility: hidden;">
+                      <!-- TODO: style me! -->
+                      <div class="window-pane-header">
+                          <span class="window-pane-header-title">
+                            <h1>Meta</h1>
+                            <label>SWE Intern</label>
+                          </span>
+                          <span class="window-pane-header-date-locale">
+                            <p>Menlo Park, CA</p>
+                            <p>May 2022 - August 2022</p>
+                          </span>
+                      </div>
+                      <div class="window-pane-content-divider"></div>
+                      <div class="window-pane-content">
+                          <p>
+                              I was a Software Engineering Intern at Meta (formely Facebook), working on the Facebook Marketplace team.
+                            </p>
+                            <h2>FE Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                            <ul>
+                              <li>CSS & styling for UI Components in React Native for Marketplace Search filters and on-scroll filter suggestions</li>
+                              <li>Logic for managing a dynamic, collapsable, ordered list of filters</li>
+                              <li>Logic for applying the filter to a search based on filter type and taxonomy</li>
+                              <li>Logic for syncing filters applied in the top bar with filters applied in the existing filters "toast" popover menu</li>
+                              <li>Feature-gating logic and incremental user-exposure rollout code</li>
+                              <li>An on-scroll feed unit that dynamically changed its text based on the amount of items</li>
+                              <li>Logic for setting the feed unit to only show on the third page of a user's results</li>
+                              <li>GraphQL fragments to fetch filter and on-scroll suggestion data from the backend</li>
+                              <li>Lazy-loading calls to only conditionally fetch data as needed, optimizing the search engine results page</li>
+                            </ul>
+                            <h2>BE Responsibilities</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                              <li>A refactor of clunky legacy system into a more modern system that utilized the strategy programming pattern</li>
+                              <li>An entirely new strategy to deal with the filters returned to the top bar</li>
+                              <li>Logic to call an NLP API to return top-suggested filters based on a user search and locale</li>
+                              <li>Logic to clean and sanitize poorly formatted data into a more usable and efficient filter object</li>
+                              <li>Asynchronous logic for comparing top-suggested filter data with available filters</li>
+                              <li>New graphQL schemas for top bar filters and on-scroll filter suggestions</li>
+                              <li>Documentation for the refactored strategy filter system</li>
+                            </ul>
+                            <p>Additionally, I ran user tests on these features via:</p>
+                            <ul>
+                              <li>Setting up user exposure metrics and percentages on UI/UX variants</li>
+                              <li>Analyzing user sentiment and custom feature gating of code accordingly</li>
+                            </ul>
+                            <h2>Languages & Tools</h2>
+                            <div class="window-pane-content-divider"></div>
+                               <ul>
+                                  <li>React Native</li>
+                                  <li>GraphQL</li>
+                                  <li>Hack (PHP)</li>
+                                  <li>Typescript</li>
+                                  <li>Mercurial</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FNBO Panel -->
+                    <div class="window-pane-content-container" id="fnbo-content" style="content-visibility: hidden;">
+                        <!-- TODO: style me! -->
+                        <div class="window-pane-header">
+                            <span class="window-pane-header-title">
+                              <h1>First National Bank</h1>
+                              <label>Software Engineering Intern</label>
+                            </span>
+                            <span class="window-pane-header-date-locale">
+                              <p>Omaha, NE</p>
+                              <p>May 2021 - August 2021</p>
+                            </span>
+                        </div>
+                        <div class="window-pane-content-divider"></div>
+                        <div class="window-pane-content">
+                            <p>
+                                I was a Software Engineering Intern on the Software Automation Team of First National Bank of Omaha.
+                              </p>
+                              <h2>Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Writing integration tests for various aspects of a front-end web portal using Selenium in Java</li>
+                                <li>Tailoring tests to work in a variety of environments and browsers, such as Chrome, Edge, FF, IE, and Opera</li>
+                                <li>Communicating vulnerabilities and bugs to developers</li>
+                                <li></li>
+                              </ul>
+                              <h2>Languages & Tools</h2>
+                              <div class="window-pane-content-divider"></div>
+                                 <ul>
+                                    <li>Java</li>
+                                    <li>COBOL</li>
+                                    <li>JavaScript</li>
+                                    <li>Selenium</li>
+                                  </ul>
+                        </div>
+                    </div>
+                
+                    <!-- Ameritas Panel TODO!!!-->
+                    <div class="window-pane-content-container" id="ameritas-content" style="content-visibility: hidden;">
+                        <!-- TODO: style me! -->
+                        <div class="window-pane-header">
+                            <span class="window-pane-header-title">
+                              <h1>Ameritas</h1>
+                              <label>Machine Learning Intern</label>
+                            </span>
+                            <span class="window-pane-header-date-locale">
+                              <p>Omaha, NE</p>
+                              <p>Dec. 2020 - May 2021</p>
+                            </span>
+                        </div>
+                        <div class="window-pane-content-divider"></div>
+                        <div class="window-pane-content">
+                            <p>
+                                I was a Machine Learning Intern at Ameritas, a financial services company in Lincoln, NE.
+                              </p>
+                              <h2>Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Cleaning and Exploration of massive data sets to find trends and set up for model testing and validation</li>
+                                <li>Fitting machine learning models to real world data sets</li>
+                                <li>Predicting revenue streams and financial data from various models</li>
+                                <li>Analyzing model results and formatting them to present to members of management</li>
+                              </ul>
+                              <h2>Languages & Tools</h2>
+                              <div class="window-pane-content-divider"></div>
+                                 <ul>
+                                    <li>Python</li>
+                                    <li>Jupyter Notebook</li>
+                                    <li>Tensorflow</li>
+                                    <li>Pandas</li>
+                                    <li>Numpy</li>
+                                    <li>Matplotlib</li>
+                                  </ul>
+                        </div>
+                    </div>
+                
+                    <!-- CSCE Panel TODO!!!-->
+                    <div class="window-pane-content-container" id="csce-content" style="content-visibility: hidden;">
+                        <!-- TODO: style me! -->
+                        <div class="window-pane-header">
+                            <span class="window-pane-header-title">
+                              <h1>UNL CSCE</h1>
+                              <label>Teaching Assistant</label>
+                            </span>
+                            <span class="window-pane-header-date-locale">
+                              <p>Lincoln, NE</p>
+                              <p>Dec. 2020 - May 2023</p>
+                            </span>
+                        </div>
+                        <div class="window-pane-content-divider"></div>
+                        <div class="window-pane-content">
+                            <p>
+                                I was a TA for the following CSCE classes: 156, 283H, and 284H.
+                              </p>
+                              <h2>Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Conducting special topics lectures</li>
+                                <li>Conducting labs</li>
+                                <li>Holding office hours</li>
+                                <li>Grading assignments</li>
+                                <li>Improving the CSCE TA Program</li>
+                              </ul>
+                              <h2>Special Topics</h2>
+                              <p>I conducted special topics lectures and labs on the following topics:</p>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Web Socket Communication <a href="https://cheery-lily-b8497f.netlify.app/">(Lab Demo)</a></li>
+                              </ul>
+                              <h2>Topics Covered</h2>
+                              <div class="window-pane-content-divider"></div>
+                                 <ul>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>API Design</li>
+                                    <li>Databases</li>
+                                    <li>Algorithm analysis (Big O, Recursion, etc.)</li>
+                                    <li>Graphs</li>
+                                    <li>Trees</li>
+                                    <li>Priority Queues</li>
+                                    <li>Hashing</li>
+                                  </ul>
+                            </div>
+                    </div>
+                
+                    <!-- Flywheel Panel TODO!!!-->
+                    <div class="window-pane-content-container" id="flywheel-content" style="content-visibility: hidden;">
+                        <!-- TODO: style me! -->
+                        <div class="window-pane-header">
+                            <span class="window-pane-header-title">
+                              <h1>Flywheel</h1>
+                              <label>SWE Intern</label>
+                            </span>
+                            <span class="window-pane-header-date-locale">
+                              <p>Omaha, NE</p>
+                              <p>May 2020 - Aug. 2020</p>
+                            </span>
+                        </div>
+                            <div class="window-pane-content-divider"></div>
+                        <div class="window-pane-content">
+                            <p>
+                                I was a Software Engineering Intern at Flywheel, a premium WordPress Hosting company in Omaha, NE.
+                              </p>
+                              <h2>Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Creating an admin dashboard for managing customer support tickets</li>
+                                <li>Architecting a "nuke site" tool for quickly wiping a site clean of all content</li>
+                                <li>Integrating the Divi WordPress theme with Flywheel's site spinup process</li>
+                                <li>Writing a diagnostics tool for tracking the health of a Digital Ocean Droplet</li>
+                              </ul>
+                              <h2>Languages & Tools</h2>
+                              <div class="window-pane-content-divider"></div>
+                                 <ul>
+                                    <li>JavaScript (Vue.js)</li>
+                                    <li>Ruby (Ruby on Rails Framework)</li>
+                                    <li>Git</li>
+                                </ul>
+                        </div> 
+                    </div>
+
+                    <!-- Code Hero Academy Panel TODO!!!-->
+                    <div class="window-pane-content-container" id="codehero-content" style="content-visibility: hidden;">
+                        <!-- TODO: style me! -->
+                        <div class="window-pane-header">
+                            <span class="window-pane-header-title">
+                              <h1>Code Hero Academy</h1>
+                              <label>Co-Founder & Curriculum Designer</label>
+                            </span>
+                            <span class="window-pane-header-date-locale">
+                              <p>Lakeville, MN</p>
+                              <p>June 2018 - August 2023</p>
+                            </span>
+                        </div>
+                            <div class="window-pane-content-divider"></div>
+                        <div class="window-pane-content">
+                            <p>
+                                I started Code Hero Academy with Venkateswara and Naga in 2018 to fill a void in the local education system for computer science education.
+                              </p>
+                              <h2>Responsibilities</h2>
+                              <div class="window-pane-content-divider"></div>
+                              <ul>
+                                <li>Creating the four-year project-based curriculum</li>
+                                <li>Funding and outreach to local government and education officials</li>
+                                <li>Instructing and mentoring students</li>
+                              </ul>
+                              <h2>Languages & Tools</h2>
+                              <div class="window-pane-content-divider"></div>
+                                 <ul>
+                                    <li>Python</li>
+                                    <li>C#</li>
+                                    <li>Unity</li>
+                                    <li>JavaScript</li>
+                                    <li>Robotics (Raspberry Pi)</li>
+                                </ul>
+                        </div> 
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+    
+        <!-- <div class="search-area">
+            <div class="window" style="width:30rem;">
+                <div class="title-bar"> 
+                    <button aria-label="Close" class="close"></button>
+                    <h1 class="title">Search</h1>
+                    <button aria-label="Resize" disabled class="hidden"></button>
+                </div>
+                <div class="separator"></div>
+                
+                <div class="modeless-dialog">
+                    <section class="field-row" style="justify-content: flex-start">
+                        <label for="text_find" class="modeless-text">Find:</label>
+                        <input id="text_find" type="text" style="width:100%;" placeholder="">
+                    </section>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button class="btn">Cancel</button>
+                        <button class="btn" style="width:95px;">Find</button>
+                    </section>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="work.js"></script>
+</body>
+</html>

@@ -1,471 +1,974 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <title>System.css Starter</title>
+    <title>lseper.dev</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="system-extend.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="modal.css">
+    <!-- modal stuff -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+
 </head>
-<body>
-    <!-- TODO: style me! -->
-    <div class="desktop">
-        <ul role="menu-bar">
-            <li role="menu-item" aria-haspopup="false"><img src="./icon/apple.svg" width='16' height='13' alt="apple icon"/></li>
-            <li role="menu-item" tabindex="0" aria-haspopup="true">
-          File
-          <ul role="menu">
-            <li role="menu-item"><a href="#menu">New (Cmd + N)</a></li>
-            <li role="menu-item"><a href="#menu">Open (Cmd + O)</a></li>
-            <li role="menu-item"><a href="#menu">Save (Cmd + S)</a></li>
-          </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-          Edit
-          <ul role="menu">
-            <li role="menu-item"><a href="#menu">Undo (Cmd + Z)</a></li>
-            <li role="menu-item"><a href="#menu">Redo (Cmd + Shift + Z)</a></li>
-            <li role="menu-item"><a href="#menu">Cut (Cmd + X)</a></li>
-            <li role="menu-item"><a href="#menu">Copy (Cmd + C)</a></li>
-            <li role="menu-item"><a href="#menu">Paste (Cmd + V)</a></li>
-          </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-          View
-          <ul role="menu">
-            <li role="menu-item"><a href="#menu">Zoom In (Cmd +)</a></li>
-            <li role="menu-item"><a href="#menu">Zoom Out (Cmd -)</a></li>
-          </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-          Special
-          <ul role="menu">
-            <li role="menu-item"><a href="#menu">Toggle Fun (Cmd + F)</a></li>
-          </ul>
-        </li>
-      </ul>
 
-      <!-- About / Projects / LinksWindow -->
-      <div class="draggable" style="top: 5rem; left: 5rem;">
-          <div class="window" style="width: 30rem;">
-              <div class="title-bar"> 
-                  <h1 class="title">Liam Seper</h1>
-              </div>
-              <div class="details-bar">
-                  <!-- TODO: style me! -->
-                  <ul role="menu-bar" class="details-bar-content">
-                      <li role="menu-item" tabindex="0" aria-haspopup="false">
-                          About
-                      </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
-                          Work Experience
-                          <ul role="menu">
-                          <li role="menu-item"><a href="#menu">Hudl</a></li>
-                          <li role="menu-item" class="divider"></li>
-                          <li role="menu-item"><a href="#menu">Palantir</a></li>
-                          <li role="menu-item"><a href="#menu">Meta</a></li>
-                          <li role="menu-item"><a href="#menu">First National</a></li>
-                          <li role="menu-item"><a href="#menu">Ameritas</a></li>
-                          <li role="menu-item"><a href="#menu">UNL Computing Center</a></li>
-                          <li role="menu-item"><a href="#menu">Flywheel</a></li>
-                          <li role="menu-item"><a href="#menu">Code Hero Academy</a></li>
-                          </ul>
-                      </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
-                          Projects
-                          <ul role="menu">
-                          <li role="menu-item"><a href="#menu">Action</a></li>
-                          <li role="menu-item"><a href="#menu">Another Action</a></li>
-                          <li role="menu-item"><a href="#menu">Something else here</a></li>
-                          </ul>
-                      </li>
-                      <li role="menu-item" tabindex="0" aria-haspopup="true">
-                          Links
-                          <ul role="menu">
-                          <li role="menu-item"><a href="#menu">You</a></li>
-                          <li role="menu-item"><a href="#menu">Get the</a></li>
-                          <li role="menu-item"><a href="#menu">Idea</a></li>
-                          </ul>
-                      </li>
-                  </ul>
-              </div>
-
-              <!-- TODO: style me! -->
-              <div class="window-pane" style="height: 500px; overflow-y: scroll;">
-                
-                  <!-- Hudl Panel -->
-                  <div class="window-pane-content-container" id="hudl-content" style="content-visibility: visible;">
-                      <!-- TODO: style me! -->
-                      <div class="window-pane-header">
-                          <span class="window-pane-header-title">
-                            <h1>Hudl</h1>
-                            <label>Software Engineer</label>
-                          </span>
-                          <span class="window-pane-header-date-locale">
-                            <p>Lincoln, NE</p>
-                            <p>Feb. 2024 - Present</p>
-                          </span>
-                      </div>
-                      <div class="window-pane-content-divider"></div>
-                      <div class="window-pane-content">
-                          <p>
-                              I am currently a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
-                            </p>
-                            <h2>Responsibilities</h2>
-                            <div class="window-pane-content-divider"></div>
-                            <ul>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
-                                <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
-                                <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
-                                <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
-                            </ul>
-                            <p>Additionally, I am involved in user testing via:</p>
-                            <ul>
-                                <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
-                                <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
-                            </ul>
-                            <h2>Languages & Tools</h2>
-                            <div class="window-pane-content-divider"></div>
-                            <ul>
-                                <li>Typescript</li>
-                                <li>React Native</li>
-                                <li>Zustand</li>
-                                <li>UI Kit</li>
-                                <li>GraphQL</li>
-                                <li>C# (.NET)</li>
-                            </ul>
-                        </div>  
-                  </div>
-              
-                  <!-- Palantir Panel -->
-                  <div class="window-pane-content-container" id="palantir-content" style="content-visibility: hidden;">
-                      <!-- TODO: style me! -->
-                      <div class="window-pane-header">
-                          <span class="window-pane-header-title">
-                            <h1>Palantir</h1>
-                            <label>Software Engineer</label>
-                          </span>
-                          <span class="window-pane-header-date-locale">
-                            <p>Lincoln, NE</p>
-                            <p>Feb. 2024 - Present</p>
-                          </span>
-                      </div>
-                      <div class="window-pane-content-divider"></div>
-                      <div class="window-pane-content">
-                          <p>
-                              I am currently a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
-                            </p>
-                            <h2>Responsibilities</h2>
-                            <div class="window-pane-content-divider"></div>
-                            <ul>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
-                                <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
-                                <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
-                                <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
-                                <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
-                            </ul>
-                            <p>Additionally, I am involved in user testing via:</p>
-                            <ul>
-                                <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
-                                <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
-                            </ul>
-                            <h2>Languages & Tools</h2>
-                            <div class="window-pane-content-divider"></div>
-                            <ul>
-                                <li>Typescript</li>
-                                    <li>React Native</li>
-                                    <li>Zustand</li>
-                                    <li>UI Kit</li>
-                                    <li>GraphQL</li>
-                                    <li>C# (.NET)</li>
-                                </ul>
-                        </div>
+<body class='text-gray-700 font-body'>
+    <div class='header'>
+        <div class='blur flex flex-col p-10 items-center'>
+            <div class='grid grid-cols-4 md:gap-4 md:w-4/5 lg:w-2/3 xl:w-1/2'>
+                <div class='relative'>
+                    <div class='w-4/5 lg:w-2/3 absolute bottom-0 right-0 bg-white rounded-full'>
+                        <a href="https://github.com/lseper" target='_blank'>
+                            <svg class='text-purple-900 hover:text-indigo-900 fill-current w-11/10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/>
+                            </svg>
+                        </a>
                     </div>
-            
-                  <!-- Meta Panel -->
-                  <div class="window-pane-content-container" id="meta-content" style="content-visibility: hidden;">
-                      <!-- TODO: style me! -->
-                      <div class="window-pane-header">
-                          <span class="window-pane-header-title">
-                            <h1>Meta</h1>
-                            <label>SWE Intern</label>
-                          </span>
-                          <span class="window-pane-header-date-locale">
-                            <p>Menlo Park, CA</p>
-                            <p>May 2022 - August 2022</p>
-                          </span>
-                      </div>
-                      <div class="window-pane-content-divider"></div>
-                      <div class="window-pane-content">
-                          <p>
-                              I was a Software Engineering Intern at Meta (formely Facebook), working on the Facebook Marketplace team.
-                            </p>
-                            <h2>FE Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                            <ul>
-                              <li>CSS & styling for UI Components in React Native for Marketplace Search filters and on-scroll filter suggestions</li>
-                              <li>Logic for managing a dynamic, collapsable, ordered list of filters</li>
-                              <li>Logic for applying the filter to a search based on filter type and taxonomy</li>
-                              <li>Logic for syncing filters applied in the top bar with filters applied in the existing filters "toast" popover menu</li>
-                              <li>Feature-gating logic and incremental user-exposure rollout code</li>
-                              <li>An on-scroll feed unit that dynamically changed its text based on the amount of items</li>
-                              <li>Logic for setting the feed unit to only show on the third page of a user's results</li>
-                              <li>GraphQL fragments to fetch filter and on-scroll suggestion data from the backend</li>
-                              <li>Lazy-loading calls to only conditionally fetch data as needed, optimizing the search engine results page</li>
-                            </ul>
-                            <h2>BE Responsibilities</h2>
-                            <div class="window-pane-content-divider"></div>
-                            <ul>
-                              <li>A refactor of clunky legacy system into a more modern system that utilized the strategy programming pattern</li>
-                              <li>An entirely new strategy to deal with the filters returned to the top bar</li>
-                              <li>Logic to call an NLP API to return top-suggested filters based on a user search and locale</li>
-                              <li>Logic to clean and sanitize poorly formatted data into a more usable and efficient filter object</li>
-                              <li>Asynchronous logic for comparing top-suggested filter data with available filters</li>
-                              <li>New graphQL schemas for top bar filters and on-scroll filter suggestions</li>
-                              <li>Documentation for the refactored strategy filter system</li>
-                            </ul>
-                            <p>Additionally, I ran user tests on these features via:</p>
-                            <ul>
-                              <li>Setting up user exposure metrics and percentages on UI/UX variants</li>
-                              <li>Analyzing user sentiment and custom feature gating of code accordingly</li>
-                            </ul>
-                            <h2>Languages & Tools</h2>
-                            <div class="window-pane-content-divider"></div>
-                               <ul>
-                                  <li>React Native</li>
-                                  <li>GraphQL</li>
-                                  <li>Hack (PHP)</li>
-                                  <li>Typescript</li>
-                                  <li>Mercurial</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class='flex flex-col items-center sm:px-4 lg:px-10 pt-8 pb-2 col-span-2 relative text-sm sm:text-base md:text-xl lg:text-2xl'>
+                    <img src="images/profile-photo.jpg" alt="" class='profile-image rounded-full border-4 md:border-8 border-white'>
+                    <button onClick="copyPhone()" class='font-medium p-2 mt-2 rounded-full bg-white'>
+                        <a href="tel:6124122313">
+                            <svg class="pb-1 w-8 h-8 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </a>
+                        <h2 class='sm:inline-block hidden' id="phone">612-412-2313</h2>
+                    </button>
+                    <button onClick="copyEmail()" class='font-medium p-1 lg:p-2 mt-2 rounded-full bg-white'>
+                        <a href="mailto:seperliam@gmail.com">
+                            <svg class="pb-1 w-8 h-8 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </a>
+                        <h2 class='sm:inline-block hidden' id="email">seperliam@gmail.com</h2>
+                    </button>
+                </div>
+                <div class='relative'>
+                    <div class='w-4/5 lg:w-2/3 absolute bottom-0 bg-white rounded-full'>
+                        <a href="https://www.linkedin.com/in/liam-seper-208a0b192/" target='_blank'>
+                            <svg class='text-blue-600 fill-current w-11/10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
                     </div>
-
-                    <!-- FNBO Panel -->
-                    <div class="window-pane-content-container" id="fnbo-content" style="content-visibility: hidden;">
-                        <!-- TODO: style me! -->
-                        <div class="window-pane-header">
-                            <span class="window-pane-header-title">
-                              <h1>First National Bank</h1>
-                              <label>Software Engineering Intern</label>
-                            </span>
-                            <span class="window-pane-header-date-locale">
-                              <p>Omaha, NE</p>
-                              <p>May 2021 - August 2021</p>
-                            </span>
-                        </div>
-                        <div class="window-pane-content-divider"></div>
-                        <div class="window-pane-content">
-                            <p>
-                                I was a Software Engineering Intern on the Software Automation Team of First National Bank of Omaha.
-                              </p>
-                              <h2>Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Writing integration tests for various aspects of a front-end web portal using Selenium in Java</li>
-                                <li>Tailoring tests to work in a variety of environments and browsers, such as Chrome, Edge, FF, IE, and Opera</li>
-                                <li>Communicating vulnerabilities and bugs to developers</li>
-                                <li></li>
-                              </ul>
-                              <h2>Languages & Tools</h2>
-                              <div class="window-pane-content-divider"></div>
-                                 <ul>
-                                    <li>Java</li>
-                                    <li>COBOL</li>
-                                    <li>JavaScript</li>
-                                    <li>Selenium</li>
-                                  </ul>
-                        </div>
-                    </div>
-                
-                    <!-- Ameritas Panel TODO!!!-->
-                    <div class="window-pane-content-container" id="ameritas-content" style="content-visibility: hidden;">
-                        <!-- TODO: style me! -->
-                        <div class="window-pane-header">
-                            <span class="window-pane-header-title">
-                              <h1>Ameritas</h1>
-                              <label>Machine Learning Intern</label>
-                            </span>
-                            <span class="window-pane-header-date-locale">
-                              <p>Omaha, NE</p>
-                              <p>Dec. 2020 - May 2021</p>
-                            </span>
-                        </div>
-                        <div class="window-pane-content-divider"></div>
-                        <div class="window-pane-content">
-                            <p>
-                                I was a Machine Learning Intern at Ameritas, a financial services company in Lincoln, NE.
-                              </p>
-                              <h2>Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Cleaning and Exploration of massive data sets to find trends and set up for model testing and validation</li>
-                                <li>Fitting machine learning models to real world data sets</li>
-                                <li>Predicting revenue streams and financial data from various models</li>
-                                <li>Analyzing model results and formatting them to present to members of management</li>
-                              </ul>
-                              <h2>Languages & Tools</h2>
-                              <div class="window-pane-content-divider"></div>
-                                 <ul>
-                                    <li>Python</li>
-                                    <li>Jupyter Notebook</li>
-                                    <li>Tensorflow</li>
-                                    <li>Pandas</li>
-                                    <li>Numpy</li>
-                                    <li>Matplotlib</li>
-                                  </ul>
-                        </div>
-                    </div>
-                
-                    <!-- CSCE Panel TODO!!!-->
-                    <div class="window-pane-content-container" id="csce-content" style="content-visibility: hidden;">
-                        <!-- TODO: style me! -->
-                        <div class="window-pane-header">
-                            <span class="window-pane-header-title">
-                              <h1>UNL CSCE</h1>
-                              <label>Teaching Assistant</label>
-                            </span>
-                            <span class="window-pane-header-date-locale">
-                              <p>Lincoln, NE</p>
-                              <p>Dec. 2020 - May 2023</p>
-                            </span>
-                        </div>
-                        <div class="window-pane-content-divider"></div>
-                        <div class="window-pane-content">
-                            <p>
-                                I was a TA for the following CSCE classes: 156, 283H, and 284H.
-                              </p>
-                              <h2>Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Conducting special topics lectures</li>
-                                <li>Conducting labs</li>
-                                <li>Holding office hours</li>
-                                <li>Grading assignments</li>
-                                <li>Improving the CSCE TA Program</li>
-                              </ul>
-                              <h2>Special Topics</h2>
-                              <p>I conducted special topics lectures and labs on the following topics:</p>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Web Socket Communication <a href="https://cheery-lily-b8497f.netlify.app/">(Lab Demo)</a></li>
-                              </ul>
-                              <h2>Topics Covered</h2>
-                              <div class="window-pane-content-divider"></div>
-                                 <ul>
-                                    <li>Java</li>
-                                    <li>JavaScript</li>
-                                    <li>API Design</li>
-                                    <li>Databases</li>
-                                    <li>Algorithm analysis (Big O, Recursion, etc.)</li>
-                                    <li>Graphs</li>
-                                    <li>Trees</li>
-                                    <li>Priority Queues</li>
-                                    <li>Hashing</li>
-                                  </ul>
+                </div>
+            </div>
+    </div>
+    </div>
+    <!-- content div -->
+    <div class='bg-gray-200 lg:px-16 pb-10 text-center'>
+        <div class='flex-initial 2xl:w-3/4 xl:w-full xl:m-auto'>
+            <!-- Part below images (only visible on mobile)-->
+            <nav class='flex flex-row justify-around lg:justify-between text-lg md:text-2xl md:hidden'>
+                <!-- Link tags -->
+                <button onClick="showAbout()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-blue-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        About
+                    </h2>
+                </button>
+                <button onClick="showWork()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-purple-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Work
+                    </h2>
+                </button>
+                <button onClick="showProjects()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-red-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Projects
+                    </h2>
+                </button>
+                <button onClick="showClubs()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-green-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Activity
+                    </h2>
+                </button>
+                <button onClick="showHonors()" class='w-1/5 md:w-1/6 pb-4 px-1 pt-3 rounded-b-full bg-yellow-600 text-white font-semibold'>
+                    <h2 class='text-sm sm:text-lg mt-2 md:m-3'>
+                        Honors
+                    </h2>
+                </button>
+            </nav>
+            <!-- Start of Info Div -->
+            <div class='flex flex-wrap md:flex-nowrap lg:justify-between xl:pt-10 pt-4 px-4 lg:px-0'>
+                <div class='flex flex-col w-full' id='body-wrapper'>
+                    <!-- About div -->
+                    <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl' id='about-div'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>About</h1>
+                        <!-- About Content -->
+                        <section class="text-gray-700 ">
+                            <div class="container flex flex-col items-center px-5 py-8 mx-auto">
+                              <div class="flex flex-col w-full text-left ">
+                                <div class="w-full mx-auto lg:w-5/6">
+                                  <h2 class="mx-auto mb-4 text-xl font-semibold leading-none tracking-tighter text-black title-font">Hello!</h2>
+                                  <div class="mx-auto text-base font-medium leading-relaxed text-gray-700 ">
+                                      <p>I'm Liam, a Software Engineer in the San Francisco Bay Area. I am a recent Computer Science and Mathematics graduate from the Raikes School of Computer Science and Management at the University of Nebraska-Lincoln.</p>
+                                      <br>
+                                      <p>I am passionate about many things, such as web development, game development, tournament system mathematics, and graphics programming. I made this website so you can get to know me better than a simple LinkedIn page, or one-page resume.</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                    </div>
-                
-                    <!-- Flywheel Panel TODO!!!-->
-                    <div class="window-pane-content-container" id="flywheel-content" style="content-visibility: hidden;">
-                        <!-- TODO: style me! -->
-                        <div class="window-pane-header">
-                            <span class="window-pane-header-title">
-                              <h1>Flywheel</h1>
-                              <label>SWE Intern</label>
-                            </span>
-                            <span class="window-pane-header-date-locale">
-                              <p>Omaha, NE</p>
-                              <p>May 2020 - Aug. 2020</p>
-                            </span>
-                        </div>
-                            <div class="window-pane-content-divider"></div>
-                        <div class="window-pane-content">
-                            <p>
-                                I was a Software Engineering Intern at Flywheel, a premium WordPress Hosting company in Omaha, NE.
-                              </p>
-                              <h2>Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Creating an admin dashboard for managing customer support tickets</li>
-                                <li>Architecting a "nuke site" tool for quickly wiping a site clean of all content</li>
-                                <li>Integrating the Divi WordPress theme with Flywheel's site spinup process</li>
-                                <li>Writing a diagnostics tool for tracking the health of a Digital Ocean Droplet</li>
-                              </ul>
-                              <h2>Languages & Tools</h2>
-                              <div class="window-pane-content-divider"></div>
-                                 <ul>
-                                    <li>JavaScript (Vue.js)</li>
-                                    <li>Ruby (Ruby on Rails Framework)</li>
-                                    <li>Git</li>
-                                </ul>
-                        </div> 
+                          </section>                
                     </div>
 
-                    <!-- Code Hero Academy Panel TODO!!!-->
-                    <div class="window-pane-content-container" id="codehero-content" style="content-visibility: hidden;">
-                        <!-- TODO: style me! -->
-                        <div class="window-pane-header">
-                            <span class="window-pane-header-title">
-                              <h1>Code Hero Academy</h1>
-                              <label>Co-Founder & Curriculum Designer</label>
-                            </span>
-                            <span class="window-pane-header-date-locale">
-                              <p>Lakeville, MN</p>
-                              <p>June 2018 - August 2023</p>
-                            </span>
+                    <!-- Projects Div -->
+                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='projects-div'>
+                        <h1 class='text-4xl mb-6 md:text-5xl lg:text-6xl font-bold text-black'>Projects</h1>
+
+                        <div class="flex flex-col w-full mb-4 text-center">
+                            <div class="w-full mx-auto">
+                                <!-- Intro Header -->
+                            <h2 class="mx-auto mb-2 text-xl font-base leading-none tracking-tighter text-gray-700 italic">Cool stuff I've made</h2>
+                            </div>
                         </div>
-                            <div class="window-pane-content-divider"></div>
-                        <div class="window-pane-content">
-                            <p>
-                                I started Code Hero Academy with Venkateswara and Naga in 2018 to fill a void in the local education system for computer science education.
+                        
+                        <!-- Slipstream Card -->
+                        <div class="relative mb-10 flex max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                            <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                            <img
+                                src="images/slipstream-showcase.gif"
+                                alt="ui/ux review check"
+                            />
+                            <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                            </div>
+                            <div class="p-6">
+                            <div class="mb-3 flex items-center justify-between">
+                                <h5 class="block text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                Slipstream
+                                </h5>
+                                <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                    <a href="https://github.com/danielnoon/slipstream" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                        <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                        </svg>Source</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                                Slipstream is a tournament management solution for non-traditional tournament formats written in Typescript. Features full support for Mariokart 8 Deluxe and Mariokart Wii. Created originally for the UNL eSports Club and Mariokart community, and has been adopted at over 10 Midwestern Universities.
+                            </p>
+                            <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">React</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-600 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Ionic</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-orange-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Zustand</div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="p-6 pt-3">
+                            <a href="https://slipstreamapp.net"
+                                class="block w-full select-none rounded-lg bg-green-500 py-3.5 px-7 text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                type="button"
+                                data-ripple-light="true"
+                            >
+                                Try it out!
+                            </a>
+                            </div>
+                        </div>
+
+                        <!-- Raytracer Card -->
+                        <div class="relative mb-10 flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                            <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                            <img
+                                src="images/raytracer-output.png"
+                                alt="ui/ux review check"
+                            />
+                            <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                            </div>
+                            <div class="p-6">
+                            <div class="mb-3 flex items-center justify-between">
+                                <h5 class="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                Memory Safe Raytracer
+                                </h5>
+                                <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                    <a href="https://github.com/lseper/raytracer" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                        <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                        </svg>Source</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                                A multithreaded raytracer written from scratch in Rust. Supports camera movement, dynamic focal length, metallic, glass, and lambertian materials, and thread tailorability.
+                            </p>
+                            <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-orange-800 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Rust</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Tag Feud Card -->
+                        <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                          <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                          <img
+                              src="images/art-tag-showcase.gif"
+                              alt="ui/ux review check"
+                          />
+                          <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+                          </div>
+                          <div class="p-6">
+                          <div class="mb-3 flex items-center justify-between">
+                              <h5 class="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+                              Art Feud
+                              </h5>
+                              <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+                                  <a href="https://github.com/lseper/art-tag-feud" class="flex gap-2 shadow w-32 block border-github-primary border-2 rounded-full focus:outline-none focus:github-primary px-4 py-2 text-github-primary hover:bg-github-primary hover:text-white">
+                                      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                      </svg>Source</span>
+                                  </a>
                               </p>
-                              <h2>Responsibilities</h2>
-                              <div class="window-pane-content-divider"></div>
-                              <ul>
-                                <li>Creating the four-year project-based curriculum</li>
-                                <li>Funding and outreach to local government and education officials</li>
-                                <li>Instructing and mentoring students</li>
-                              </ul>
-                              <h2>Languages & Tools</h2>
-                              <div class="window-pane-content-divider"></div>
-                                 <ul>
-                                    <li>Python</li>
-                                    <li>C#</li>
-                                    <li>Unity</li>
-                                    <li>JavaScript</li>
-                                    <li>Robotics (Raspberry Pi)</li>
-                                </ul>
-                        </div> 
+                          </div>
+                          <p class="block text-base font-light leading-relaxed text-gray-800 antialiased">
+                              A web-based multiplayer game written in Typescript centered around guessing meta tags on digital art pieces faster than your opponents.
+                          </p>
+                          <div class="group mt-8 inline-flex flex-wrap items-center justify-center gap-3">
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-400 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">React</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-600 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                    <div class="mt-px">Express</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-green-700 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">Socket.io</div>
+                                </div>
+                                <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-blue-900 py-2 px-3.5 align-baseline text-xs font-bold uppercase leading-none text-white">
+                                <div class="mt-px">Zod</div>
+                                </div>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+
+
+
+                    <!-- Involvements div (hidden in medium and below screens) -->
+                    <div class='mb-6 p-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='clubs-div'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Involvements</h1>
+                        <div class="container items-center px-5 py-3">
+                            <!-- Involvements Content -->
+                            <section class="text-gray-700 ">
+                                <div class="container flex flex-col items-center px-2 py-8 mx-auto">
+                                    <div class="flex flex-col w-full mb-8 text-center">
+                                        <div class="w-full mx-auto">
+                                            <!-- Intro Header -->
+                                        <h2 class="mx-auto mb-2 text-xl font-base leading-none tracking-tighter text-gray-700 italic">I do other stuff too!</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Mini Header -->
+                                    <div class="flex flex-col items-center pb-4 mx-auto mb-10 border-b border-gray-200 sm:flex-row">
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-xl text-center leading-none text-black lg:text-2xl font-bold tracking-wide text-black uppercase">Student Organizations</h2>
+                                    </div>
+                                </div>
+                                
+                                <!-- cSAB -->
+                                <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/csab_logo.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                            <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">School of Computing Student Advisory Board</h2>
+                                            <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Executive Primary Programmer</h3>
+                                            <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                                <p>I'm the elected Executive Primary Programmer of UNL's School of Computing Student Advisory Board, where I am in charge of:</p>
+                                                <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                                    <li>Planning the semester's events</li>
+                                                    <li>Fascilitating marketing strategies for our events</li>
+                                                    <li>Managing event idea proposals and voting</li>
+                                                    <li>Collaborating with other computing clubs for event planning help, marketing, and faculty connection</li>
+                                                    <li>Delegating members to run certain events</li>
+                                                    <li>Syncing with the Treasurer to determine what funding can be used for which events</li>
+                                                </ul>
+                                                <br>
+                                                <p>I've proposed and will be fascilitating the running of some first-time collaborative efforts with other clubs in the School of Computing, such as:</p>
+                                                <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                                    <li>UNL's 1st Annual Game Jam - UNL Game Development Club</li>
+                                                    <li>Open Source Showcase - Operating Systems and Open Source Club</li>
+                                                    <li>Delegating members to run certain events</li>
+                                                    <li>Semesterly Mariokart Open Tournament</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- oSTEM -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/ostem-logo.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">oSTEM</h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Treasurer</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>I am the Treasurer of the oSTEM Chapter at UNL, a club dedicated to the support and development of LGBTQ+ individuals within various fields of STEM. We hold meetings monthly, as well as careers fairs, fundraisers, and networking events. As treasurer, I am responsible for:</p>
+                                            <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                                <li>Managing the club's budget delegated by the Engineering Student Advisory Board</li>
+                                                <li>Researching, forecasting, and reimbursing costs incurred throughout the year for routine club activities</li>
+                                                <li>Planning the finances around the annual trip to the OSTEM National conference, such as lodging, meals, and flight costs</li>
+                                            </ul>
+                                            <br>
+                                            <p>Club officers and selected members attend the annual oSTEM National Conference, in which oSTEM chapters from universities around the world attend the weekend-long conference. I attended the 2019 conference in Detroit, as well as the virtual ones in 2020 and 2021, and am going to attend the 2022 conference this year in Boston.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- KRA -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/kra_logo.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> Kauffman Residents Association </h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Representative</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>Kauffman Residents Association serves as a liason between UNL's Housing Staff and the students that live in the Kauffman Residence Hall. We help fascilitate residential events, such as game nights, study breaks, and career prep sessions.</p>
+                                            <br>
+                                            <p>As wing-representative, I've proposed and ran the following events:</p>
+                                            <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                                <li>Semesterly Kauffman Mariokart Tournament</li>
+                                                <li>Spotify Song Guessing Game Night</li>
+                                                <li>Career Prep Resume Roast</li>
+                                                <li>Career Prep Mock Technical Interview Prep</li>
+                                            </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- FLUFF -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/fluff_mascot.jpg">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">FLUFF</h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">President & Co-Founder</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>FLUFF is a interest-based club that focuses on anthropormorphic media and content. We seek to promote activity, engagement, and content-creation within this diverse and creative community, as well as sharing information and news.</p>
+                                            <br>
+                                            <p>Sadly we were not able to hold any in-person meetings, as our RSO was just established right as the COVID-19 pandemic hit, but we plan to hold meetings as UNL moves back to in-person classes and permits RSOs to meet in-person once again.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- UNL GDC -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/UNL_game_dev_logo.jpg">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> UNL Game Development Club </h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Member</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>The Game Development Club is an RSO dedicated to providing a community and space for students to develop video games of all shapes and sizes. From 4X to Visual Novel, various games of all genres are pitched, teams are formed, and development occurs throughout the year in small teams.</p>
+                                            <br>
+                                            <p>They also attend Game Jams, which are essentially hackathons dedicated to game-making. I was fortunate to attend the K-State Game Jam in January of 2020 with fellow members of the club. Our team won 3rd overall, and won the "Best&nbspAI" award as well.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- Lobve -->
+
+                                </div>
+                            </section>
+                        </div>
                     </div>
-            
+
+                    <!-- Honors div (hidden when medium or smaller)-->
+                    <div class='p-6 mb-6 rounded-md shadow-md bg-gray-100 text-center text-xl md:text-2xl xl:text-3xl hidden md:block' id='honors-div'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Honors</h1>
+                        <div class="container items-center px-5 py-3">
+                            <!-- Projects Content -->
+                            <section class="text-gray-700 ">
+                                <div class="container flex flex-col items-center px-2 md:px-10 py-8 mx-auto">
+                                    <div class="flex flex-col w-full mb-8 text-center">
+                                        <div class="w-full mx-auto">
+                                            <!-- Intro Header -->
+                                        <h2 class="mx-auto mb-2 text-xl font-base leading-none tracking-tighter text-gray-700 italic">Things I'm proud to be a part of</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Mini Header -->
+                                    <div class="flex flex-col items-center pb-4 mx-auto mb-10 border-b border-gray-200 sm:flex-row">
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-xl text-center leading-none text-black lg:text-2xl font-bold tracking-wide text-black uppercase">Academic Societies</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- Raikes -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/Raikes.jpg">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Raikes School</h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Student</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>Part of Cohort 2019, The <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/">Raikes School</a> is a highly selective school within UNL that teaches an interdisciplinary program of computer science and business. It emphasizes project-based learning and hands-on experience with it's self-contained project based curriculum, as well as 2 full years of <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="">Design&nbspStudio</a> for students to get cutting-edge industry experience 2 full years before graduating.</p>
+                                            <br>
+                                            <p>With two years of internship experience under my belt, I am eager to jump into Design Studio this semester, and am hoping to work on projects involving machine learning and generative, dynamic consumer-content.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- UNL GDC -->
+                                    <div class="flex flex-col items-center pb-10 mx-auto mb-10 sm:flex-row">
+                                        <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50 sm:mr-10">
+                                        <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/UNL_logo.png">
+                                        </div>
+                                        <div class="flex-grow mt-6 text-center sm:text-left sm:mt-0">
+                                        <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> UNL Honors Program </h2>
+                                        <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Student</h3>
+                                        <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                            <p>I'm a part of UNL's own University-wide <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/">Honors&nbspProgram</a> is a highly selective school within UNL that teaches an interdisciplinary program of computer science and business. It emphasizes project-based learning and hands-on experience with it's self-contained project based curriculum, as well as 2 full years of <a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="">Design&nbspStudio</a> for students to get cutting-edge industry experience 2 full years before graduating.</p>
+                                            <br>
+                                            <p>With two years of internship experience under my belt, I am eager to jump into Design Studio this semester, and am hoping to work on projects involving machine learning and generative, dynamic consumer-content.</p>
+                                        </div>                                        
+                                        </div>
+                                    </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <!-- Scholarships Table (hidden when medium or smaller)-->
+                    <div class="flex-grow-1 bg-gray-100 rounded-md shadow-md md:sticky md:top-0 hidden md:flex" id="scholarships-flex">
+                        <div class="pt-10 flex-col flex items-center px-3 pb-10 mx-auto mb-10">
+                            <div class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 text-black rounded-full bg-gray-50">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto rounded-full" src="images/graphic-scholarship.png">
+                            </div>
+                            <div class="flex-grow mt-6 text-center">
+                            <h2 class="text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">Scholarhips</h2>
+                            <h3 class="mb-4 text-sm tracking-widest text-gray-400 uppercase">Recepient</h3>
+                            <div class="text-base text-left font-medium leading-relaxed text-gray-700">
+                                <section class="text-blueGray-600 ">
+                                    <div class="container px-1 py-2 mx-auto">
+                                      <div class="w-full mx-auto">
+                                        <table class="w-full text-left whitespace-no-wrap table-auto">
+                                          <thead>
+                                            <tr class='text-center'>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">Name</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2019</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2020</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2021</th>
+                                              <th class="px-2 py-2 text-sm font-medium tracking-widest text-blueGray-500 title-font">2022</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr class="items-center text-sm">
+                                              <td class="pl-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/george-beadle-scholarship-guidelines-2020-2021">George Beadle</a></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                              <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center text-sm">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://financialaid.unl.edu/husker-heritage-scholarship-guidelines-2020-2021">Husker Heritage</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center text-sm">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://raikes.unl.edu/applicant-information">Raikes</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center text-sm">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://honors.unl.edu/academics">Honors</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                            <tr class="items-center">
+                                                <td class="px-1 py-2 text-black bg-blueGray-50"><a class='text-blue-500 border-b border-transparent hover:border-blue-400' href="https://math.unl.edu/scholarships-and-aid">S&H Jeans</a></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                                <td class="px-1 py-2 text-black bg-blueGray-50 border-t-2 border-b-2 border-blueGray-200"><img alt="check" class=" w-4 h-4 sm:w-6 sm:h-6 mx-auto rounded-full" src="images/check.png"></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </section>                                    
+                            </div>                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Work div (hidden when medium or smaller)-->
+                <div class='px-2 sm:px-10 md:px-1 lg:px-3 lg:ml-10 md:ml-6 md:mt-0 text-base hidden md:block'>
+                    
+                    <!-- Blog Post div -->
+                    <div class='mb-6 lg:mb-8 p-6 rounded-md shadow-md pt-6 text-center text-xl md:text-2xl xl:text-3xl' style='background-color: antiquewhite;' id='blog-div'>
+                        <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black'>Today's Note</h1>
+                        <!-- About Content -->
+                        <section class="text-gray-700 ">
+                            <div class="container flex flex-col items-center px-5 pt-8 mx-auto">
+                              <div class="flex flex-col w-full text-left ">
+                                <div class="w-full mx-auto lg:w-5/6">
+                                  <h2 class="mx-auto mb-4 text-2xl font-semibold leading-none tracking-tighter text-black title-font" id="thought-title">Excerpt Title</h2>
+                                  <div class="mx-auto text-base font-medium leading-relaxed text-gray-700">
+                                    <div id="thought-container">
+                                    </div>
+                                    <div class='pt-4 font-light' style="width: 100%; display: flex; flex-direction: row; justify-content: end;">
+                                        <div style="display: flex;flex-direction: column; align-items: end;">
+                                            <p class='pb-2' id="thought-date"></p>
+                                            <p class='text-gray-500' id="thought-location"></p>
+                                        </div>
+                                    </div>
+                                    <div class="inline-flex pt-6" style="justify-content: space-around; width: 100%">
+                                        <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l" onClick="getRandomPost()">
+                                          Random
+                                        </button>
+                                        <!-- <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l rounded-r" onClick="getPreviousPost()">
+                                          Prev
+                                        </button>
+                                        <button class="bg-blue-200 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded-l rounded-r" onClick="getNextPost()">
+                                          Next
+                                        </button> -->
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>                
+                    </div>
+
+                <div class='rounded-md shadow-md bg-gray-100 pt-6 text-center text-base hidden md:block' id="work-div">
+                    <h1 class='text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2'>Work</h1>
+
+                    <div class="container items-center px-1 sm:px-5 py-3">
+
+                        <!-- Hudl Card -->    
+                        <div class="flex flex-wrap ">
+                        <div class="w-full my-8 mx-0 lg:mx-auto bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/hudl-logo.jpeg">
+                            <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">Hudl</h2>
+                            <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Software Engineer</h3>
+                            <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">Feb 2024</h4>
+                            <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                <p>I am currently a Software Engineer at Hudl, where I work on a small team that owns Hudl's Fan TV and mobile applications, as well as livestreaming functionality.</p>
+                                <br>
+                                <p class="pb-2">
+                                    Working at Hudl has been incredible. Working on a brand new space that Hudl is entering with livestreaming and fan content, it has been phenomenal having the freedom to 
+                                    build out a new product from the ground up. I've been able to work on a variety of projects, from building out livestreaming controls, juggling user authentication across a variety of platforms,
+                                    and implementing a custom focus management framework for TV apps. I am the lead engineer on development and maintenance for the Hudl Fan TV app, which shipped to the Apple and Google Play 
+                                    stores in early July.
+                                </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                                        <li>Writing a full-stack system to segment users and send push notifications accordingly</li>
+                                        <li>Writing an authentication management system for handling login from multiple user databases and corporate credentials</li>
+                                        <li>Implementing live broadcast controls, paywalls, and geoblocking via triangulation, native location settings, and device IP address</li>
+                                        <li>Writing an in-house cross-platform focus management library for managing navigation and focus across tvOS and Android TV</li>
+                                    </ul>
+                                    <p>Additionally, I am involved in user testing via:</p>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Launching internal beta versions of our TV app on Apple's Testflight and gathering feedback</li>
+                                        <li>Iterating on AB test feedback from customer focus groups and production metrics via Snowplow</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Typescript</li>
+                                        <li>React Native</li>
+                                        <li>Zustand</li>
+                                        <li>UI Kit</li>
+                                        <li>GraphQL</li>
+                                        <li>C# (.NET)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container items-center px-1 sm:px-5 py-3">
+
+                        <!-- Palantir Card -->    
+                        <div class="flex flex-wrap ">
+                        <div class="w-full my-8 mx-0 lg:mx-auto bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/palantir.png">
+                            <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">Palantir</h2>
+                            <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Software Engineer</h3>
+                            <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">August 2023 - Feb 2024</h4>
+                            <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                <p>I was a Software Engineer on the Palantir Gotham Eco UX team, which involved writing code for the improving and maintaining the core Palantir Gotham desktop application</p>
+                                <br>
+                                <p class="pb-2">
+                                    I enjoyed my time working at Palantir, and was able to work on quite literally mission-critical software. I've been exposed to the interesting
+                                    standards and challenges that writing and maintaining a one-stop-shop application for the U.S. Military entails, and seeing the engineering behind extremely strict data privacy 
+                                    rules has been fascinating. However I didn't morally align with the ethics of the company, and decided to pursue opportunities elsewhere.
+                                </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Deriving, architecting, and writing a custom chain of responsibility for handling dispatched actions from child renderer processes to the parent main process in Electron</li>
+                                        <li>Writing a custom remote dialog to allow granular and searchable app history for Gotham users that is sensitive to government security level</li>
+                                        <li>Writing code to expose distinct main actions to renderer processes via custom function binding to RPCs in Electron</li>
+                                        <li>Writing reusable renderer UI components in renderer processes using Blueprint</li>
+                                    </ul>
+                                    <p>Additionally, I ran user tests on these features via:</p>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Setting up user exposure metrics and percentages on UI/UX variants</li>
+                                        <li>Analyzing user sentiment and custom feature gating of code accordingly</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>React</li>
+                                        <li>Redux + Sagas</li>
+                                        <li>Blueprint</li>
+                                        <li>Electron</li>
+                                        <li>Typescript</li>
+                                        <li>CSS</li>
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Meta Card -->    
+                        <div class="flex flex-wrap ">
+                        <div class="w-full my-8 mx-0 lg:mx-auto bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/meta_logo.png">
+                            <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">Meta</h2>
+                            <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">SWE Intern</h3>
+                            <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">May 2022 - August 2022</h4>
+                            <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                <p>I worked as a SWE intern on the Facebook Marketplace team, and collaborated on projects with engineers on the Facebook Product Taxonomy team. I was responsible for implementing full-stack the filters used when a user searches in Facebook Marketplace, as well as on-scroll filter suggestions in the search results feed. I worked primarily with React Native for the frontend, and Hack (an in-house flavor of PHP) for the backend.</p>
+                                <br>
+                                <p class="pb-2">
+                                    I absolutely loved my time working at Meta, and was able to push code that billions of users would see. I learned a lot about the
+                                    challenges of writing code for the massive scale that facebook operates, as well as balancing development speed with ensuring user
+                                    satisfaction. Diving deep into the massive codebase that Meta operates in was a very rewarding opportunity, and taught me a lot
+                                    about collaborating with other engineers, and communicating and outlining requirements.
+                                </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Client-Side Responsibilities</h5>
+                                    <p>On the client-side, my work involved writing:</p>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>CSS & styling for UI Components in React Native for Marketplace Search filters and on-scroll filter suggestions</li>
+                                        <li>Logic for managing a dynamic, collapsable, ordered list of filters</li>
+                                        <li>Logic for applying the filter to a search based on filter type and taxonomy</li>
+                                        <li>Logic for syncing filters applied in the top bar with filters applied in the existing filters "toast" popover menu</li>
+                                        <li>Feature-gating logic and incremental user-exposure rollout code</li>
+                                        <li>An on-scroll feed unit that dynamically changed its text based on the amount of items</li>
+                                        <li>Logic for setting the feed unit to only show on the third page of a user's results</li>
+                                        <li>GraphQL fragments to fetch filter and on-scroll suggestion data from the backend</li>
+                                        <li>Lazy-loading calls to only conditionally fetch data as needed, optimizing the search engine results page</li>
+                                    </ul>
+                                    <p>On the backend, my work involved writing:</p>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>A refactor of clunky legacy system into a more modern system that utilized the strategy programming pattern</li>
+                                        <li>An entirely new strategy to deal with the filters returned to the top bar</li>
+                                        <li>Logic to call an NLP API to return top-suggested filters based on a user search and locale</li>
+                                        <li>Logic to clean and sanitize poorly formatted data into a more usable and efficient filter object</li>
+                                        <li>Asynchronous logic for comparing top-suggested filter data with available filters</li>
+                                        <li>New graphQL schemas for top bar filters and on-scroll filter suggestions</li>
+                                        <li>Documentation for the refactored strategy filter system</li>
+                                    </ul>
+                                    <p>Additionally, I ran user tests on these features via:</p>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Setting up user exposure metrics and percentages on UI/UX variants</li>
+                                        <li>Recording and analyzing user engagement metrics to determine successful variants</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>React Native</li>
+                                        <li>GraphQL</li>
+                                        <li>Hack (PHP)</li>
+                                        <li>Typescript</li>
+                                        <li>CSS</li>
+                                        <li>Mercurial</li>
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container items-center px-1 sm:px-5 py-3">
+
+                        <!-- FNBO Card -->    
+                        <div class="flex flex-wrap ">
+                        <div class="w-full my-8 mx-0 lg:mx-auto bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/FNBO_logo.jpg">
+                            <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">First National Bank of Omaha</h2>
+                            <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Software Automation Intern</h3>
+                            <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">May 2021 - Present</h4>
+                            <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                <p>I worked as a Software Engineering Intern on the Software Automation Team of First National Bank of Omaha. I work primarily in scaled integration testing for services that FNBO provides (sorry,&nbspbut I can't exactly name which ones!). I also did some front-end work in React.</p>
+                                <br>
+                                <p>I primarily used Java with Selenium, with additional scripting done in Python. For front-end, we used primarily React.
+                                    This work has been extremely rewarding and given me an appreciation for the craft of testing software and how it is just as important, if not more, 
+                                    to write good, reliable, sustainable, and efficient tests, especially when working with financial software this important to everyday life. 
+                                </p>
+                                <br>
+                                <p class="pb-2">
+                                    While it may not be 
+                                    as important as the lines of code aboard the ISS, it has been a tremendous experience writing software for a service that is as crucial as FNBO's, and I hope to
+                                    incorporate my newfound knowledge of testing automation into future and existing passion projects of mine.
+                                </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Writing integration tests for various aspects of a front-end web portal using Selenium in Java</li>
+                                        <li>Tailoring tests to work in a variety of environments and browsers, such as Chrome, Edge, FF, IE, and Opera</li>
+                                        <li>Communicating vulnerabilities and bugs to developers</li>
+                                        <li>Analyzing automated test fails and successes to track issues</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Java</li>
+                                        <li>Selenium</li>
+                                        <li>QAComplete (Legacy Tests)</li>
+                                        <li>Python</li>
+                                        <li>Git</li>
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Ameritas Card -->    
+                    <div class="flex flex-wrap ">
+                        <div class="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                                <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/ameirtas_logo.png">
+                                <h2 class="pt-4 mb-3 text-s font-semibold tracking-wider text-black uppercase ">Ameritas</h2>
+                                <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Data Analytics Intern</h3>
+                                <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">December 2020 - May 2021</h4>
+                                <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                    <p class="mb-3 pb-2">At Ameritas I worked as part of the Data Analytics & Insights Team. It was a fantastic opportunity for me to 
+                                        apply my passion for data science to important, real-world datasets. It also taught me that visualizing and communicating 
+                                        results is just as, if not more important than the actual data exploration and analysis.
+                                    </p>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Cleaning and Exploration of massive data sets to find trends and set up for model testing and validation</li>
+                                        <li>Fitting machine learning models to real world data sets</li>
+                                        <li>Predicting revenue streams and financial data from various models</li>
+                                        <li>Analyzing model results and formatting them to present to members of management</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Tools</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Python</li>
+                                        <li>Jupyter Notebook</li>
+                                        <li>Tensorflow</li>
+                                        <li>Pandas</li>
+                                        <li>Numpy</li>
+                                        <li>Matplotlib</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UNL CSCE Teaching Assistant Card -->    
+                    <div class="flex flex-wrap ">
+                        <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
+                            <div class="p-6 text-center">
+                            <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/UNL_logo.png">
+                            <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">UNL CSCE & Raikes School</h2>
+                            <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Teaching Assistant</h3>
+                            <h4 class="text-sm tracking-widest text-gray-400 uppercase">August 2020 - December 2020</h4>
+                            <h4 class="mb-6 text-sm tracking-widest text-gray-400 uppercase">August 2021 - Present </h4>
+                            <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                <p class="mb-3 pb-2">I was a TA for CSCE 156 first semester of my Sophomore year at UNL, which is the second core CS course most CS students take at UNL.
+                                    I loved being a TA, as it helped reaffirm my belief that truly anyone of any skill level or background can learn CS if they have the right drive and
+                                    teacher. 
+                                </p>
+                                <p class="mb-3 pb-2">
+                                    It was also a fantastic opportunity to talk individually with professors within the CSCE Department at UNL, and learn more about the amazing
+                                    research they are doing (I'm hoping to find the time to do some this next semester!).
+                                </p>
+                                <p class="mb-3 pb-2">
+                                    This next semester, I will be a TA for the Raikes-specific second-year class RAIK 283H, better known as Software Engineering III. The class is 
+                                    focused around algorithm analysis, and teaches it in a very intuitive project-based path instead of the traditional lecture-lab format. This was
+                                    one of my favorite courses in college thus far, so I'm very excited to TA for it! 
+                                </p>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                    <li>Conducting special topics lectures</li>
+                                    <li>Conducting labs</li>
+                                    <li>Holding office hours</li>
+                                    <li>Grading assignments</li>
+                                    <li>Improving the CSCE TA Program</li>
+                                </ul>
+                                <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Topics</h5>
+                                <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML / CSS</li>
+                                    <li>Object oriented fundamentals</li>
+                                    <li>Recursion</li>
+                                    <li>Databases</li>
+                                    <li>Algorithm design & analysis</li>
+                                    <li>Data structures</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Flywheel Card -->    
+                        <div class="flex flex-wrap ">
+                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
+                                <div class="p-6 text-center">
+                                <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/flywheel_logo.png">
+                                <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">Flywheel</h2>
+                                <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Software Engineering Intern</h3>
+                                <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">May 2020 - August 2020</h4>
+                                <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                    <p class="mb-3 pb-2">My first internship was as a Software Engineering Intern at Flywheel, a premium WordPress Hosting company based in Omaha.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        I had barely gotten my feet wet with web developlment by the start of my internship, and thus learned a TON about web applications and how you 
+                                        can quite literally put anything online. It was what really ignited my passion for web development, and gave me a great introduction to 
+                                        working in an agile tech startup.  
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        It was actually beneficial with my internship being remote, as I was able to be both a member of a standard development, specifically on the 
+                                        team that built and maintained the customer support dashboard and admin tools. I was able to dive headfirst into both frontend and backend
+                                        development, completing tickets for both on our Jira board.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        My other team was a summer-long intern project, which involved incorporating the Divi WordPress theme into Flywheel's site spinup process.
+                                        It was the first time Flywheel had partnered with a WordPress theme company, and was quite the project for interns to take on! I was the lead
+                                        engineer on the team, and I gained tremendous leadership and development experience by fully integrating into every part of the projects process,
+                                        from initial conception and prototyping to the final touches and handoff. 
+                                    </p>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Participating in agile ceremonies</li>
+                                        <li>Completing both front and back end tasks</li>
+                                        <li>Communicating with stakeholders</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Languages & Frameworks</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>JavaScript (Vue.js)</li>
+                                        <li>Ruby (Ruby on Rails Framework)</li>
+                                        <li>HAML / SCSS</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <!-- Code Hero Academy Card -->    
+                        <div class="flex flex-wrap ">
+                            <div class="w-full mx-auto my-8 bg-white border rounded-lg shadow-xl">
+                                <div class="p-6 text-center">
+                                <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mx-auto -mt-12 rounded-full shadow-xl aboslute" src="images/code_hero_logo.png">
+                                <h2 class="pt-4 mb-6 text-s font-semibold tracking-wider text-black uppercase ">Code Hero Academy</h2>
+                                <h3 class="text-xl leading-none tracking-tighter text-black lg:text-2xl ">Co-Founder & Curriculum Designer</h3>
+                                <h4 class="mb-8 text-sm tracking-widest text-gray-400 uppercase">June 2018 - August 2019</h4>
+                                <div class="mb-3 text-base leading-relaxed text-gray-600 text-left">
+                                    <p class="mb-3 pb-2">Code Hero Academy was born out of a frustration for a lack of computer science education within my hometown's education system.
+                                        Ever since I was in middle school, computers fascinated me and I was eager to learn more about them, but aside from the occasional trip to the media
+                                        center to print something, our system had next to no educational resources for students like me.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        I took matters into my own hands, buying a cheap $200 laptop to dive into programming myself. After a couple years of working
+                                        landscaping jobs around my neighborhood in the Spring, Summer, and Fall, I had saved up enough money to build my own desktop. It was here that I 
+                                        really dove headfirst into coding with various projects, including a (terrible) Terraria clone.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        The summer going into my Senior year I was looking for a chance to put my budding programming skills to use. It was here I met Venkateswara and Naga Kakula,
+                                        two people who shared my frustrations with the lack of CS opportunity in my hometown. We founded Code Hero Academy together to fix this.
+                                    </p>
+                                    <p class="mb-3 pb-2">
+                                        Using a project-based learning system, as opposed to the classroom-style method of teaching that was the norm for other learning academies, we 
+                                        were able to not only teach students concepts quicker, but get them actually <em>excited</em> about learning. From building their own Amazon
+                                        Alexa with a Raspberry Pi, to making a Fortnite Clone in Unity, it was amazing what these students could do when given the opportunity.
+                                    </p>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Responsibilities</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-3 pb-2 list-inside">
+                                        <li>Curriculum creation</li>
+                                        <li>Lesson instruction</li>
+                                        <li>Student mentoring</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Topics Instructed</h5>
+                                    <ul class="list-disc mt-4 ml-3 mb-2 list-inside">
+                                        <li>Python</li>
+                                        <li>C# (Unity)</li>
+                                        <li>Shell Scripting (Raspberry Pi)</li>
+                                        <li>Robotics</li>
+                                    </ul>
+                                    <h5 class="text-sm tracking-widest text-gray-500 uppercase border-b border-gray-300 inline-block">Bonus</h5>
+                                    <p class="mb-2 pb-2">
+                                        Being the first learning academy in our area focused on computer science, we attracted the attention of my district's rotary, as well as
+                                        our US House Representative, Angie Craig! I got to personally talk with her about the issues with a lack of curriculum concerning computer
+                                        programming in both middle and high school.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Zelda modal-->
+    <div id="zeldaModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="message-container fade-in">
+            <p class="modal-message">
+                <span>it's </span>
+                <span>dangerous </span>
+                <span>to </span>
+                <span>go </span>
+                <br>
+                <span>alone! </span>
+                <span>take </span>
+                <span>this.</span>
+            </p>
+            </div>
+            <div class="icon-container">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id='flame-one' class="flame image">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/96970eadd5059c2b0e5f2884ac85a1392f3b633d/assets/oldman.svg" class="image" id="old-man">
+            <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id="flame-two" class="flame image">
+            </div>
+            <div class="resume-container">
+            <img id="sword" src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/sword.jpg">
+            <a href="resume.pdf" id="resume">My Resume</a>
             </div>
         </div>
     </div>
 
-
-    
-        <!-- <div class="search-area">
-            <div class="window" style="width:30rem;">
-                <div class="title-bar"> 
-                    <button aria-label="Close" class="close"></button>
-                    <h1 class="title">Search</h1>
-                    <button aria-label="Resize" disabled class="hidden"></button>
-                </div>
-                <div class="separator"></div>
-                
-                <div class="modeless-dialog">
-                    <section class="field-row" style="justify-content: flex-start">
-                        <label for="text_find" class="modeless-text">Find:</label>
-                        <input id="text_find" type="text" style="width:100%;" placeholder="">
-                    </section>
-                    <section class="field-row" style="justify-content: flex-end">
-                        <button class="btn">Cancel</button>
-                        <button class="btn" style="width:95px;">Find</button>
-                    </section>
-                </div>
-            </div>
-        </div> -->
+    <div id="zeldaModal" class="modal">
+    <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="message-container fade-in">
+        <p class="modal-message">
+            <span>it's </span>
+            <span>dangerous </span>
+            <span>to </span>
+            <span>go </span>
+            <br>
+            <span>alone! </span>
+            <span>take </span>
+            <span>this.</span>
+        </p>
+        </div>
+        <div class="icon-container">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id='flame-one' class="flame image">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/96970eadd5059c2b0e5f2884ac85a1392f3b633d/assets/oldman.svg" class="image" id="old-man">
+        <img src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/flame.png" id="flame-two" class="flame image">
+        </div>
+        <div class="resume-container">
+        <img id="sword" src="https://raw.githubusercontent.com/pin0S/zelda-meme-modal/main/assets/sword.jpg">
+        <a href="resume.pdf" id="resume">My Resume</a>
+        </div>
     </div>
 
+    </div>
+    <script src='index.js'></script>
 </body>
 </html>
