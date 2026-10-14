@@ -1,4 +1,5 @@
 const workExperienceContainers = [
+    'modelcode-content',
     'hudl-content',
     'palantir-content',
     'meta-content',
@@ -10,6 +11,10 @@ const workExperienceContainers = [
 ].map(id => document.getElementById(id));
 
 const workExperienceObject = {
+    modelcode: {
+        dropdownName: 'Modelcode',
+        container: document.getElementById('modelcode-content'),
+    },
     hudl: {
         dropdownName: 'Hudl',
         container: document.getElementById('hudl-content'),

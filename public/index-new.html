@@ -77,7 +77,7 @@
        <div class="draggable" style="top: 25em; left: 50%; z-index: 1000; content-visibility: hidden;" id="about-dialog-container">
            <div class="standard-dialog center column" style="width:30rem;" id="about-dialog">
              <h1 class="dialog-text dialog-title">Hello!</h1>
-             <p class="dialog-text">I'm Liam, a Software Engineer / Artist from Minnesota.</p>
+             <p class="dialog-text">I'm Liam, a Software Engineer / Artist living in Los Angeles, California. I hold degrees in Mathematics, Computer Science, and Business from the University of Nebraska-Lincoln.</p>
              <p class="dialog-text">I made this website myself! Feel free to look around.</p>
            </div>
        </div>
@@ -231,8 +231,9 @@
                       <li role="menu-item" tabindex="1" aria-haspopup="true">
                           Work Experience
                           <ul role="menu" id="work-experience-menu">
-                          <li role="menu-item"><a onclick="showWorkExperience('hudl')">Hudl</a></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('modelcode')">Modelcode</a></li>
                           <li role="menu-item" class="divider"></li>
+                          <li role="menu-item"><a onclick="showWorkExperience('hudl')">Hudl</a></li>
                           <li role="menu-item"><a onclick="showWorkExperience('palantir')">Palantir</a></li>
                           <li role="menu-item"><a onclick="showWorkExperience('meta')">Meta</a></li>
                           <li role="menu-item"><a onclick="showWorkExperience('fnbo')">First National</a></li>
@@ -287,8 +288,58 @@
                       </div>  
                   </div>
 
+                  <!-- Modelcode Panel -->
+                  <div class="window-pane-content-container" id="modelcode-content" style="content-visibility: visible;">
+                      <div class="window-pane-header">
+                          <span class="window-pane-header-title">
+                            <h1>Modelcode</h1>
+                            <label>Software Engineer</label>
+                          </span>
+                          <span class="window-pane-header-date-locale">
+                            <p>Remote</p>
+                            <p>June 2025 - Present</p>
+                          </span>
+                      </div>
+                      <div class="window-pane-content-divider"></div>
+                      <div class="window-pane-content">
+                          <p>
+                              I am currently a full-stack Software Engineer at Modelcode, an AI startup that modernizes legacy codebases using autonomous coding agents.
+                            </p>
+                            <h2>Responsibilities</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Architecting a unified SSE + polling live-data layer for real-time agent execution updates</li>
+                                <li>Building full-stack Code Review, Knowledge Hub, and Maintenance Project experiences for AI-generated code</li>
+                                <li>Leading a security audit of the platform, fixing shell injection, SSRF, and unauthenticated-route vulnerabilities</li>
+                                <li>Implementing server-side product analytics and end-to-end localization across the frontend, backend, and billing services</li>
+                                <li>Building superadmin tenant monitoring tools for tracking customer activity and project progress</li>
+                                <li>Hardening Windows and on-prem sandbox reliability for enterprise customer deployments</li>
+                            </ul>
+                            <p>Additionally, I champion developer productivity and quality via:</p>
+                            <ul>
+                                <li>Introducing Playwright end-to-end testing, writing over 10,000 lines of tests for billing, onboarding, and roadmap flows</li>
+                                <li>Building an automated regression testing suite for our code translation pipeline</li>
+                                <li>Creating agentic Claude Code implement-and-verify workflows and an autonomous on-call triage daemon, plus <b>cmux-workspaces</b>: an in-house orchestrator that runs Linear tickets as parallel, siloed Claude Code sessions, each with its own git worktrees, Postgres and Redis containers, service ports, and browser profile, taking every ticket from implementation through browser verification to a draft PR, and cleaning up automatically on merge</li>
+                            </ul>
+                            <h2>Languages & Tools</h2>
+                            <div class="window-pane-content-divider"></div>
+                            <ul>
+                                <li>Typescript</li>
+                                <li>React / Next.js</li>
+                                <li>Python (FastAPI)</li>
+                                <li>PostgreSQL</li>
+                                <li>Go</li>
+                                <li>Playwright</li>
+                                <li>PostHog</li>
+                                <li>Claude Code</li>
+                                <li>cmux</li>
+                                <li>MCP (SigNoz, Linear)</li>
+                            </ul>
+                        </div>
+                  </div>
+
                   <!-- Hudl Panel -->
-                  <div class="window-pane-content-container" id="hudl-content" style="content-visibility: visible;">
+                  <div class="window-pane-content-container" id="hudl-content" style="content-visibility: hidden;">
                       <div class="window-pane-header">
                           <span class="window-pane-header-title">
                             <h1>Hudl</h1>
@@ -296,13 +347,13 @@
                           </span>
                           <span class="window-pane-header-date-locale">
                             <p>Lincoln, NE</p>
-                            <p>Feb. 2024 - Present</p>
+                            <p>Feb. 2024 - June 2025</p>
                           </span>
                       </div>
                       <div class="window-pane-content-divider"></div>
                       <div class="window-pane-content">
                           <p>
-                              I am currently a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
+                              I was a Software Engineer at Hudl, a sports technology company in Lincoln, NE.
                             </p>
                             <h2>Responsibilities</h2>
                             <div class="window-pane-content-divider"></div>
